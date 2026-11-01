@@ -4,52 +4,79 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="dark">
-<title>Kinetix / Salon & Barbershop 10-Second Video Studio</title>
+<title>Kinetix / Salon &amp; Barbershop 10s Video Studio</title>
 <link rel="stylesheet" href="css/shared.css">
+<style>
+.session-mode-toggle {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--line);
+  padding: 12px 16px;
+  border-radius: 14px;
+  margin-bottom: 8px;
+}
+.session-mode-toggle strong { font-size: 13px; color: #fff; }
+.session-mode-toggle p { font-size: 11px; color: var(--muted); margin: 2px 0 0; }
+.solo-shield-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: rgba(16, 185, 129, 0.15);
+  color: #34d399;
+  font-size: 10.5px;
+  font-weight: 800;
+  padding: 3px 8px;
+  border-radius: 999px;
+  border: 1px solid rgba(16, 185, 129, 0.35);
+}
+</style>
 </head>
 <body>
 <div class="shell">
 <header class="topbar">
   <div class="brand">
-    <span class="brand-mark">▶</span>
+    <span class="brand-mark">&#9654;</span>
     <span>Kinetix / Video Prompt Studio</span>
   </div>
   <nav class="suite-nav" aria-label="Studio Switcher">
-    <a href="index.html" class="suite-nav-link" title="Kinetix Hub">✦ Hub</a>
-    <a href="photoshoot.html" class="suite-nav-link"><span class="studio-btn-icon">📸</span> Photoshoot</a>
-    <a href="salon.html" class="suite-nav-link active"><span class="studio-btn-icon">💈</span> Salon & Barbershop</a>
-    <a href="makeup.html" class="suite-nav-link"><span class="studio-btn-icon">💄</span> Makeup & Beauty <span class="nav-badge">NEW</span></a>
-    <a href="tattoo.html" class="suite-nav-link"><span class="studio-btn-icon">🖋️</span> Tattoo Studio</a>
+    <a href="index.html" class="suite-nav-link" title="Kinetix Hub">&#9881; Hub</a>
+    <a href="photoshoot.html" class="suite-nav-link"><span class="studio-btn-icon">&#128248;</span> Photoshoot</a>
+    <a href="salon.html" class="suite-nav-link active"><span class="studio-btn-icon">&#9986;</span> Salon &amp; Barbershop</a>
+    <a href="makeup.html" class="suite-nav-link"><span class="studio-btn-icon">&#128132;</span> Makeup &amp; Beauty <span class="nav-badge">NEW</span></a>
+    <a href="tattoo.html" class="suite-nav-link"><span class="studio-btn-icon">&#128394;</span> Tattoo Studio</a>
   </nav>
   <div class="top-meta">
     <span class="pill"><span class="pill-dot-video"></span> 10s Haircut Dynamics</span>
-    <span class="pill" id="totalOptionCount">1,600+ haircut motion choices</span>
-    <span class="pill">Offline · Zero Uploads</span>
+    <span class="pill" id="totalOptionCount">Curated Non-Redundant Banks</span>
+    <span class="pill">Offline &bull; Zero Uploads</span>
   </div>
 </header>
 
 <section class="hero">
   <div>
-    <div class="eyebrow" id="heroEyebrow">In-Progress Haircut Dynamics · 10-Second Salon Video</div>
-    <h1 id="heroTitle">Salon & <span>Barbershop</span><br>10s Video Studio</h1>
-    <p id="heroDescription">Turn haircut reference images into realistic 10-second in-progress video clips. Direct metallic shears snipping hair strands over fingers, fallen hair clippings resting on draped black capes, blow-dryer air sweeps, 360° swivel chair rotations, and mirror reflection reveals.</p>
+    <div class="eyebrow" id="heroEyebrow">Authentic Haircut Experience &bull; Salon Dynamics</div>
+    <h1 id="heroTitle">Salon &amp; <span>Barbershop</span><br>10s Video Studio</h1>
+    <p id="heroDescription">Direct gritty, authentic in-progress haircut motion or triumphant finished makeover reveals. Animate metallic shears snips, damp comb glides, blow-dryer air sweeps, cut hair clippings falling onto draped capes, and 360-degree swivel chair reveals over 10 seconds.</p>
     <div class="hero-actions">
-      <button class="btn btn-primary" id="randomTop">✦ Surprise me</button>
-      <button class="btn btn-secondary" id="copyTop">▣ Copy 10s salon prompt</button>
-      <button class="btn btn-secondary" id="shareLookTop" type="button">🔗 Share motion</button>
-      <button class="btn btn-quiet" id="resetTop">↺ Start over</button>
+      <button class="btn btn-primary" id="randomTop">&#10024; Surprise me</button>
+      <button class="btn btn-secondary" id="copyTop">&#128203; Copy 10s prompt</button>
+      <button class="btn btn-secondary" id="shareLookTop" type="button">&#128279; Share motion</button>
+      <button class="btn btn-quiet" id="resetTop">&#8635; Start over</button>
     </div>
   </div>
   <aside class="hero-note">
-    <div class="sparkle">💈 ✂ 💈</div>
+    <div class="sparkle">&#10024; &#9986; &#10024;</div>
     <div>
-      <strong>Authentic Motion & Tactile Realism.</strong>
-      <p>Direct authentic barber shears, comb lifts, air streams, and cape drapes across a synchronized 10-second timeline arc.</p>
+      <strong>Zero Stylist Leakage in Solo Mode.</strong>
+      <p>Toggle seamlessly between an in-progress scissor haircut session (barber, shears, comb, cape clippings) and a solo client celebration (cape off, swivel chair turn, touching fresh ends, zero barber hands).</p>
       <div class="tags">
-        <span class="tag">Scissor Snip Physics</span>
-        <span class="tag">Hair Clippings on Cape</span>
-        <span class="tag">Swivel Chair Reveal</span>
-        <span class="tag">Mirror Perspective POV</span>
+        <span class="tag">In-Progress Snips</span>
+        <span class="tag">Solo Client Reveal</span>
+        <span class="tag">Draped Cape Clippings</span>
+        <span class="tag">360° Swivel Spin</span>
       </div>
     </div>
   </aside>
@@ -60,12 +87,12 @@
   <section class="preset-strip">
     <div class="strip-head">
       <div>
-        <h2>Start with an In-Progress Salon Motion Sequence</h2>
-        <p>Curated 10-second haircut moments across styling chairs, barber scissors, and mirror reveals.</p>
+        <h2>Start with a 10-Second Salon Creative Direction</h2>
+        <p>Curated 10-second sequences across scissor cuts, blowout styling, and chair spins.</p>
       </div>
       <div class="strip-actions">
-        <button class="btn btn-secondary btn-small" id="saveCustomLook" type="button">⭐ Save motion</button>
-        <button class="btn btn-secondary btn-small" id="shuffleLooks" type="button">↻ Shuffle motions</button>
+        <button class="btn btn-secondary btn-small" id="saveCustomLook" type="button">&#128190; Save motion</button>
+        <button class="btn btn-secondary btn-small" id="shuffleLooks" type="button">&#128256; Shuffle motions</button>
       </div>
     </div>
     <div class="preset-grid" id="presets"></div>
@@ -76,44 +103,47 @@
   <section class="step-card" id="stepCard">
     <div class="step-head">
       <div>
-        <div class="eyebrow" id="stepEyebrow">Motion Direction · 01</div>
-        <h2 id="stepTitle">Salon venue & vibe</h2>
-        <p id="stepDescription">Select the establishment design, background bustle, and station props.</p>
+        <div class="eyebrow" id="stepEyebrow">Motion Direction &bull; 01</div>
+        <h2 id="stepTitle">Haircut &amp; styling</h2>
+        <p id="stepDescription">Select signature haircut baseline, wet or damp texture, and parting.</p>
       </div>
-      <div class="step-icon" id="stepIcon">💈</div>
+      <div class="step-icon" id="stepIcon">&#9986;</div>
     </div>
 
-    <!-- 10s Timeline Scrubber Widget -->
+    <!-- Visual 10s Timeline Preview Widget -->
     <div class="timeline-card" id="timelinePreview">
       <div class="timeline-head">
-        <span class="timeline-badge">▶ 10-Second Haircut Temporal Arc</span>
-        <small style="color: var(--muted); font-size: 11px;">Synchronized Salon Progression</small>
+        <span class="timeline-badge">&#9654; 10-Second Salon Temporal Arc</span>
+        <span id="sessionStatus"></span>
       </div>
       <div class="timeline-track">
         <div class="timeline-beat-card beat-1">
-          <div class="beat-time"><span style="color:var(--cyan)">00:00 - 00:03</span> · Beat 1: Chair Anchor</div>
-          <div class="beat-label" id="beat1Text">Seated in styling chair draped in cape; barber lifts comb to guide scissors.</div>
+          <div class="beat-time"><span style="color:var(--green)">00:00 - 00:03</span> &bull; Beat 1: Chair Anchor &amp; Setup</div>
+          <div class="beat-label" id="beat1Text">Reference image anchor; client seated in styling chair as camera establishes position.</div>
         </div>
         <div class="timeline-beat-card beat-2">
-          <div class="beat-time"><span style="color:var(--accent-video)">00:03 - 00:07</span> · Beat 2: Haircut Action Apex</div>
-          <div class="beat-label" id="beat2Text">Metallic shears snip hair strands as clippings flutter onto cape; chair rotates slightly.</div>
+          <div class="beat-time"><span style="color:var(--pink)">00:03 - 00:07</span> &bull; Beat 2: Haircut Apex Action</div>
+          <div class="beat-label" id="beat2Text">Shears snip cleanly through hair section; cut clippings flutter down onto draped black cape.</div>
         </div>
         <div class="timeline-beat-card beat-3">
-          <div class="beat-time"><span style="color:var(--pink2)">00:07 - 00:10</span> · Beat 3: Mirror Glance & Settle</div>
-          <div class="beat-label" id="beat3Text">Barber combs perimeter clean; model tilts chin and inspects reflection in mirror.</div>
+          <div class="beat-time"><span style="color:var(--yellow)">00:07 - 00:10</span> &bull; Beat 3: Resolution &amp; Reaction</div>
+          <div class="beat-label" id="beat3Text">Client catches her reflection in mirror with an authentic satisfied smile as action settles.</div>
         </div>
       </div>
     </div>
 
+    <!-- Main Core Fields Grid -->
     <div class="field-grid" id="fields"></div>
+
+    <!-- Progressive Disclosure Fine-Tune Area -->
     <div id="fineTuneArea"></div>
     <div id="specialContent"></div>
     
     <div class="step-foot">
-      <span class="step-count" id="stepCount">Step 1 of 5</span>
+      <span class="step-count" id="stepCount">Step 1 of 6</span>
       <div class="step-buttons">
-        <button class="btn btn-secondary" id="prevStep">← Previous</button>
-        <button class="btn btn-primary" id="nextStep">Next step →</button>
+        <button class="btn btn-secondary" id="prevStep">&#8592; Previous</button>
+        <button class="btn btn-primary" id="nextStep">Next step &#8594;</button>
       </div>
     </div>
   </section>
@@ -122,14 +152,14 @@
 <aside class="preview">
   <div class="preview-head">
     <div class="preview-top">
-      <div class="eyebrow">10s Salon Video Output</div>
+      <div class="eyebrow">10s Video Output</div>
       <div class="preview-top-actions">
-        <button class="btn btn-secondary btn-small" id="openHistoryBtn" type="button" title="View prompt history">🕒 History <span class="badge" id="historyBadge">0</span></button>
+        <button class="btn btn-secondary btn-small" id="openHistoryBtn" type="button" title="View prompt history">&#128340; History <span class="badge" id="historyBadge">0</span></button>
         <span class="live">Live Assembled</span>
       </div>
     </div>
-    <h2>10-Second Salon Video, Assembled</h2>
-    <p>Choreographed for photorealistic haircut dynamics.</p>
+    <h2>10-Second Prompt, Assembled</h2>
+    <p>Non-redundant salon choreography for video diffusion models.</p>
     <div class="summary" id="summary"></div>
   </div>
 
@@ -141,7 +171,7 @@
           <button type="button" class="seg-btn" id="btnFluidMode">Fluid Prose</button>
           <button type="button" class="seg-btn" id="btnDirectorMode">Director's Cue</button>
         </div>
-        <button class="btn btn-secondary btn-small" id="shareLookBtn" type="button" title="Copy shareable link">🔗 Share</button>
+        <button class="btn btn-secondary btn-small" id="shareLookBtn" type="button" title="Copy shareable link">&#128279; Share</button>
       </div>
 
       <div class="ratio-row">
@@ -179,18 +209,18 @@
       <button class="btn btn-quiet btn-small" id="selectPrompt">Select all</button>
     </div>
 
-    <textarea class="prompt-area" id="prompt" spellcheck="false" aria-label="Generated 10-second salon prompt"></textarea>
+    <textarea class="prompt-area" id="prompt" spellcheck="false" aria-label="Generated 10-second video prompt"></textarea>
 
     <div class="preview-buttons">
-      <button class="btn btn-primary" id="copy">▣ Copy 10s prompt</button>
-      <button class="btn btn-secondary" id="download">↓ Download .txt</button>
-      <button class="btn btn-secondary span2" id="copyNegative">Copy salon video negative prompt</button>
+      <button class="btn btn-primary" id="copy">&#128203; Copy 10s prompt</button>
+      <button class="btn btn-secondary" id="download">&#128190; Download .txt</button>
+      <button class="btn btn-secondary span2" id="copyNegative">Copy Video Negative Constraints</button>
     </div>
     <div class="toast" id="toast" role="status" aria-live="polite"></div>
   </div>
 
   <div class="preview-help">
-    <strong>How to use in AI Video:</strong> Upload your reference photo showing the subject or haircut into Kling, Runway Gen-3, Luma Ray 2, or Hailuo Minimax as the <strong>First Frame Anchor</strong>. Set duration to <strong>10 seconds</strong> and paste this prompt.
+    <strong>How to use in AI Video:</strong> Upload reference image as <strong>Frame 1 / Image Anchor</strong> in Kling, Runway Gen-3, Luma Ray 2, or Hailuo Minimax. Set duration to <strong>10 seconds</strong> and paste prompt.
   </div>
 </aside>
 </div>
@@ -199,94 +229,116 @@
 <div class="history-modal" id="historyModal">
   <div class="history-head">
     <div>
-      <h3>Salon Video Prompt History</h3>
-      <p>Recent prompts and salon motions saved this session.</p>
+      <h3>10s Salon Video Prompt History</h3>
+      <p>Recent prompts and motions saved this session.</p>
     </div>
-    <div>
+    <div class="history-head-actions">
       <button class="btn-quiet btn-small" id="clearHistoryBtn" type="button">Clear</button>
-      <button class="btn-quiet btn-small" id="closeHistoryBtn" type="button">✕ Close</button>
+      <button class="btn-quiet btn-small" id="closeHistoryBtn" type="button">&#10005; Close</button>
     </div>
   </div>
   <div class="history-list" id="historyList"></div>
 </div>
 <div class="modal-backdrop" id="historyBackdrop"></div>
 
-<p class="fineprint">KINETIX SALON STUDIO · 10-Second In-Progress Haircut Video Architecture · 100% Offline Client-Side</p>
+<p class="fineprint">KINETIX STUDIO &bull; 10-Second Realistic Haircut Architecture &bull; 100% Offline Client-Side</p>
 </div>
 
 <script>
 (()=>{
 const O = (label, text=label, desc='', cat='General') => ({ label, text, desc, cat });
 
-// OPTION BANKS: Salon Venue & Vibe
-const salonVenue = [
-  O('Bustling traditional Indian barbershop', 'an authentic bustling Indian barbershop with vintage hydraulic chairs, tiled walls, retro glass bottles of bay rum, and ambient street life outside'),
-  O('Upscale minimalist salon studio', 'a sleek contemporary minimalist salon with polished concrete floors, backlit frameless mirrors, black leather chairs, and architectural warm spotlights'),
-  O('Classic heritage heritage salon with brass accents', 'a charming heritage salon with dark walnut wood trim, brass fixtures, vintage mirrors, and cozy amber tungsten lighting'),
-  O('Modern industrial loft salon', 'an airy open-concept industrial loft salon with exposed brick walls, matte black metal styling stations, and tall factory windows with soft natural light')
+// ==========================================
+// DEDUPLICATED OPTION BANKS: SALON & HAIRCUT
+// ==========================================
+const haircut = [
+  O('Precision jawline French bob with wispy bangs', 'a precision French bob cut right at the jawline with delicate airy wispy fringe and razor-textured ends'),
+  O('Layered butterfly shag with face-framing tiers', 'a modern layered butterfly haircut with cheekbone-framing tiers and feathered nape layers'),
+  O('Bouncy voluminous 90s blowout', 'a voluminous 90s blowout with bouncy inward-curved ends and glossy root lift'),
+  O('Textured Italian bob with blunt baseline', 'an Italian bob with a clean blunt baseline, airy undone surface texture, and a soft side part'),
+  O('Modern textured wolf lob at collarbones', 'a shoulder-skimming textured wolf lob with choppy layers and natural strand separation'),
+  O('Sleek glass lob with center part', 'a sleek collarbone long bob with glass-like shine and clean perimeter lines')
 ];
 
-const salonBarberStaff = [
-  O('Focused Indian male barber with shears & comb', 'an experienced adult Indian male barber dressed in a neat black apron, focused attentively as he works with high-precision shears and carbon comb'),
-  O('Senior master stylist detailing bangs', 'a focused male master stylist standing slightly to her side, with professional posture and precise, confident scissor techniques'),
-  O('Barber gently rotating chair with client', 'the barber standing respectfully beside the hydraulic chair, hands calmly resting on headrest as he rotates the chair to inspect symmetry')
+const hairState = [
+  O('Damp freshly sprayed hair (clumping & sheen)', 'hair is damp from a fresh water spray bottle with subtle clumping and authentic moisture sheen before blow-drying'),
+  O('Freshly blow-dried with bouncy movement', 'freshly blow-dried hair with airy volume, natural soft silkiness, and individual strand separation'),
+  O('Dry hair during precision sectioning', 'dry, clean hair combed taut in preparation for scissors point-cutting')
 ];
 
-// OPTION BANKS: Haircut Progress & Barber Motion (10s Dynamics)
-const haircutMotion10s = [
-  O('Shears snipping damp side strands & cape flutter', 'Shears Snip & Fallen Clippings', 'Subject seated calm and upright; at 00:02 the barber lifts a damp side section between index and middle fingers, metallic shears rhythmically snip 2 inches off the ends; at 00:05 freshly cut hair clippings visibly flutter down and land on the draped black cape; at 00:08 barber combs the freshly cut perimeter smooth as she glances at her reflection'),
-  O('Blow-dryer air sweep & round brush bounce', 'Blow-Dryer Bounce & Air Lift', 'Seated facing the mirror; between 00:00 and 00:05 the barber runs a professional blow-dryer over a round ceramic brush, warm air streams lifting bangs and perimeter layers into natural buoyant bounce; at 00:07 barber releases the brush, strands fall in a silky curtain; subject candidly smiles into the mirror'),
-  O('360° Swivel chair rotation reveal', 'Hydraulic Chair 360° Spin', 'Begins in rear-profile showing the clean freshly cut neckline; at 00:03 the barber smoothly rotates the hydraulic chair 180 degrees towards camera; by 00:07 model faces forward into the lens, shoulders relaxed under the draped cape, revealing her finished haircut with a radiant confident expression'),
-  O('Precision razor feathering around cheekbones', 'Razor Texturizing Along Cheeks', 'Barber holds a feathering styling razor, gently texturizing face-framing layers beside her cheekbones between 00:02 and 00:06 with deft downward strokes; fine hair wisps fall onto the nylon cape; at 00:08 barber combs strands back behind her ear'),
-  O('Rear hand-mirror symmetry check', 'Rear Hand-Mirror Angle Check', 'At 00:02 the barber holds up a secondary hand mirror behind her head so she can inspect the back layers in the main mirror; between 00:04 and 00:07 she tilts her head side-to-side, checking the shape with an approving nod; at 00:09 lowers the mirror with a satisfied smile')
+const venue = [
+  O('Bustling authentic Indian salon & barbershop', 'an authentic bustling Indian barbershop with vintage hydraulic Belmont chairs, turquoise wall tiles, retro glass jars of blue disinfectant, and ambient street life outside'),
+  O('High-end minimalist boutique salon', 'a luxury minimalist salon interior with warm polished concrete walls, bronze mirrors, and soft recessed downlighting'),
+  O('Vintage retro barbershop with warm wood accents', 'a vintage barbershop with rich dark oak cabinets, classic chrome hydraulic chairs, and warm amber globe lights'),
+  O('Bright modern studio with natural skylights', 'a sun-lit modern hair studio with floor-to-ceiling glass, airy white surfaces, and lush potted greenery')
 ];
 
-const salonCape = [
-  O('Draped black waterproof nylon salon cape with cut hair clippings', 'a draped waterproof black nylon salon cape tightly fastened at the neck with a white paper neck strip; visible freshly cut dark hair clippings scattered realistically across the chest and shoulders of the cape'),
-  O('Silky silver-grey salon cape with falling strands', 'a shimmering silver-grey salon cape draped smoothly over her lap and shoulders, showing fallen dark hair clippings resting on the fabric'),
-  O('Classic pinstripe barber cape', 'a classic black-and-white pinstripe barber cape draped over her shoulders, framing her neck and freshly cut hairline'),
-  O('Cape unfastened & draped over lap', 'the cape has just been unclipped at the neck and draped downward over her lap, revealing her collarbones and neckline')
+const lighting = [
+  O('Flattering 3200K warm mirror vanity bulbs', 'flattering warm 3200K vanity bulb glow framing the mirror, casting soft golden highlights on her skin and hair perimeter'),
+  O('High-CRI daylight balanced salon downlights', 'high-CRI neutral daylight downlights rendering authentic hair color depth and clean scalp definition'),
+  O('Cinematic rim light with soft fill', 'moody directional key light with soft salon fill, creating crisp separation between subject and chair')
 ];
 
-// OPTION BANKS: Haircut Style & Texture
-const haircutStyle = [
-  O('Shoulder-length French bob with wispy fringe', 'a precision French bob cut right at the jawline with delicate airy wispy fringe and razor-textured ends'),
-  O('Textured wolf cut with face-framing shag layers', 'a modern textured wolf shag with graduated face-framing layers, soft curtain fringe, and lived-in strand separation'),
-  O('Long layers with arched curtain bangs', 'cascading long layers shaped with face-framing pieces and arched eyebrow-grazing curtain bangs'),
-  O('Blunt collarbone lob cut', 'a crisp blunt lob cut resting at the collarbones with clean geometric perimeter and natural swing'),
-  O('Feathered butterfly layers', 'voluminous feathered butterfly layers framing the cheekbones with organic bounce')
+// Barber & Cape options (Active only in barber mode)
+const barber = [
+  O('Experienced adult Indian male barber in black apron', 'an experienced adult Indian male barber dressed in a neat black apron, focused attentively as he works with high-precision shears and carbon comb'),
+  O('Senior master stylist in clean minimalist attire', 'a senior master hairstylist with focused artistic poise, expertly manipulating hair sections with fluid hand movements')
 ];
 
-const hairTextureState = [
-  O('Damp freshly misted hair (fine water droplets)', 'hair is damp from a fresh water spray bottle with subtle clumping and authentic moisture sheen before blow-drying'),
-  O('Freshly blow-dried silkiness (natural healthy sheen)', 'hair is freshly blow-dried with airy strand separation, healthy natural fiber sheen, and delicate organic flyaways'),
-  O('Natural thick Indian hair strand density', 'authentic dense Indian hair texture with rich natural thickness and organic straight-to-subtle-wave behavior')
+const cape = [
+  O('Black nylon cape with freshly cut hair clippings', 'a draped waterproof black nylon salon cape tightly fastened at the neck with a white paper neck strip; visible freshly cut dark hair clippings scattered realistically across the chest and shoulders of the cape'),
+  O('Clean black salon cape (haircut complete)', 'a clean draped black salon cape fastened neatly at the neck strip, with fresh styling resting smoothly against fabric')
 ];
 
-// OPTION BANKS: Cape & Camera Motion
-const salonCameraMotion = [
-  O('Gliding mirror reflection POV tracking', 'camera smoothly tracks across the styling station, capturing the model\'s direct face and the barber\'s hands both in primary view and reflected in the illuminated mirror'),
-  O('Lateral 90° chair profile push-in', 'starts as a lateral 90-degree profile framing the chair, cape, and scissors, slowly pushing in toward her cheekbone and haircut line'),
-  O('Over-the-trolley slider skimming past scissors & brushes', 'a low cinematic slider moving past styling shears, comb jars, and spray bottles on the workstation trolley to reveal the haircut in progress'),
-  O('Frontal low-angle looking up from footrest', 'camera angled slightly upward from footrest level, creating an intimate, flattering documentary perspective of the haircut session')
+// 10s Choreography for Barber Mode
+const choreographyBarber = [
+  O('Precision scissor snip & fallen clippings',
+    'Between 00:00 and 00:04 the barber combs a damp section taut between his index and middle fingers; at 00:05 metallic shears snip cleanly through the ends, with cut hair clippings gently dropping onto the black draped nylon cape; from 00:07 to 00:10 the barber combs hair down smoothly as client smiles at the crisp baseline',
+    'Shears Snip & Fallen Clippings'),
+  O('Texturizing shears & crown feathering',
+    'Between 00:00 and 00:04 the barber lifts a crown section upward; at 00:05 texturizing notch shears snip into the tips creating weightless airy movement, fine hair clippings floating onto the cape; from 00:07 to 00:10 the barber fluffs the crown and steps back slightly to assess the silhouette',
+    'Texturizing Shears & Feathering'),
+  O('Round-brush ceramic blowout & air sweep',
+    'Between 00:00 and 00:04 the barber rolls a round ceramic brush through damp crown layers; at 00:05 warm airflow from the blow-dryer nozzle sweeps through strands, unfurling bouncy voluminous curves; from 00:07 to 00:10 the brush releases a silky finished section that falls with natural bounce',
+    'Round-Brush Ceramic Blowout'),
+  O('Neck duster & cape unfasten reveal',
+    'Between 00:00 and 00:04 the barber dusts loose hairs from her nape with a soft goat-hair brush; at 00:05 unfastens the neck clasp of the black cape; from 00:07 to 00:10 the cape falls away to reveal her collarbones and neckline as she rolls her shoulders back with a radiant smile',
+    'Neck Duster & Cape Unfasten')
 ];
 
-const salonLighting = [
-  O('Warm incandescent mirror vanity glow', 'flattering warm 3200K vanity bulb glow framing the mirror, casting soft golden highlights on her skin and hair perimeter'),
-  O('Crisp daylight salon studio softbox', 'clean 5500K daylight-balanced salon lighting illuminating every individual strand and scissor snip with high clarity'),
-  O('Moody tungsten salon atmosphere with street daylight', 'mixed lighting with cozy tungsten lamps inside the shop contrasted with cool natural daylight pouring through the front window')
+// 10s Choreography for Solo Client Mode
+const choreographySolo = [
+  O('360° Swivel chair spin & hair flick',
+    'Between 00:00 and 00:04 the client sits in the vintage hydraulic styling chair facing away; at 00:05 the chair smoothly swivels 180 degrees to face the camera, her fresh layered haircut swirling gracefully; from 00:07 to 00:10 she tilts her chin up and runs fingers admiringly through new ends with a radiant smile',
+    '360° Chair Swivel & Hair Flick'),
+  O('Mirror check & gentle root fluff',
+    'Between 00:00 and 00:04 the client observes her new haircut in the mirror; at 00:05 gently fluffs roots with her fingertips, watching the airy volume settle; from 00:07 to 00:10 turns her head side-to-side admiring the perimeter lines with an approving candid smirk',
+    'Mirror Check & Root Fluff'),
+  O('Standing salon strut & celebratory spin',
+    'Between 00:00 and 00:04 the client stands up from the salon chair; at 00:05 executes an effortless spin showing the 360-degree silhouette of her new bob; from 00:07 to 00:10 settles facing the camera, hands resting casually at hips with magazine-cover confidence',
+    'Standing Strut & Spin')
 ];
 
-// Finish Checks
+const cameraMotion = [
+  O('Smooth tracking across styling station', 'camera smoothly tracks across the styling station, capturing the client in primary view and reflected in the illuminated mirror'),
+  O('Slow cinematic push-in from medium to close-up', 'camera executes a steady, seamless dolly push-in tracking smoothly from medium shot into an intimate close-up of hair details'),
+  O('Orbital arc around hydraulic chair', 'a fluid continuous 180-degree orbital arc sweeping around the styling chair while maintaining focal lock on the haircut silhouette'),
+  O('Static tripod shot with cinematic depth', 'locked-off tripod shot with shallow depth of field, razor-sharp on hair texture with background salon activity blurred')
+];
+
+// Checks
 const finishChecks = [
-  { id: 'identity', label: 'Preserve recognizable facial identity', detail: 'Strictly retain the reference woman\'s recognizable facial structure, eye shape, and warm Indian skin tone across the video.', checked: true },
-  { id: 'maleBarber', label: 'Single male barber only (no secondary women)', detail: 'The hairdresser / barber is strictly male; our model is the solitary female in the frame.', checked: true },
-  { id: 'hairRealism', label: 'Authentic hair strand density & realistic clippings', detail: 'Render individual hair strands and plausible physics of cut hair fluttering onto the cape without digital clumping.', checked: true },
-  { id: 'mirrorAccuracy', label: 'Accurate mirror reflection geometry', detail: 'Mirror reflections match subject orientation and barber motion naturally without weird temporal duplication.', checked: true },
-  { id: 'antiWarp', label: 'Anti-morphing & temporal stability', detail: 'Strictly zero tool morphing, no bending scissors, no disappearing comb teeth, and no limb distortion.', checked: true }
+  { id: 'identity', label: 'Strict identity preservation from reference image', detail: 'Lock exact facial features, bone structure, and warm Indian skin tone from reference.', checked: true },
+  { id: 'solitaryFemale', label: 'Solitary female client rule', detail: 'The client is strictly the only woman in frame; zero secondary women or female background subjects.', checked: true },
+  { id: 'hairStrands', label: 'Authentic hair fiber clumping & clippings', detail: 'Realistic wet clumping and cut hair clippings falling without artificial digital smoothing.', checked: true },
+  { id: 'reflectionOptics', label: 'Plausible mirror reflection geometry', detail: 'Reflections accurately correspond to primary view without duplicated faces or impossible angles.', checked: true },
+  { id: 'noMirror', label: 'Avoid mirrors completely (solid wall backdrop)', detail: 'Direct framing against a solid architectural salon wall; zero mirror glass or reflections.', checked: false },
+  { id: 'antiWarp', label: 'Temporal tool stability (no bending metal)', detail: 'Scissors, combs, and hands maintain rigid physical geometry without morphing or melting.', checked: true }
 ];
 
-let activeSection = 'salonVenueSec';
+// State
+let activeSection = 'haircut';
+let sessionMode = 'barber'; // 'barber' | 'solo'
 let activeRatio = '9:16';
 let activeFps = '24fps';
 let activeMotion = 'Organic (5/10)';
@@ -298,77 +350,77 @@ const checkState = {};
 finishChecks.forEach(c => checkState[c.id] = c.checked);
 
 const sections = [
-  { id: 'salonVenueSec', name: 'Salon venue & vibe', icon: '💈', desc: 'Establishment design, background bustle, and station props.' },
-  { id: 'salonStageSec', name: 'Haircut progress & barber', icon: '✂', desc: '10s haircut moment, scissor snips, comb glides, and chair swivel.' },
-  { id: 'salonHairSec', name: 'Haircut style & texture', icon: '💇', desc: 'Haircut blueprint, fiber density, and damp/dry state.' },
-  { id: 'salonCameraSec', name: 'Cape & mirror camera', icon: '🎥', desc: 'Draped cape with clippings, mirror POV, and salon lighting.' },
-  { id: 'finish', name: 'Finish & temporal controls', icon: '🛡️', desc: 'Identity preservation, male barber rules, and video negative guidance.' }
+  { id: 'haircut', name: 'Haircut & styling', icon: '&#9986;', desc: 'Baseline silhouette, hair moisture state, and texture.' },
+  { id: 'venue', name: 'Salon venue & vibe', icon: '&#127963;', desc: 'Barbershop atmosphere, mirrors, and vanity lighting.' },
+  { id: 'session', name: 'Haircut progress & barber', icon: '&#128085;', desc: 'Stylist presence, cape clippings, or solo client mode.' },
+  { id: 'motion', name: '10s Haircut choreography', icon: '&#9654;', desc: 'Scissor snips, comb glides, chair turns, and reactions.' },
+  { id: 'camera', name: 'Camera & optics', icon: '&#127910;', desc: 'Tracking across station, push-ins, and lenses.' },
+  { id: 'finish', name: 'Finish & video guardrails', icon: '&#128737;', desc: 'Identity locking, anti-warp directives, and negative exclusions.' }
 ];
 
 const fields = {
-  salonVenue: { section: 'salonVenueSec', label: 'Salon Establishment & Architecture', opts: salonVenue, def: 0 },
-  salonBarberStaff: { section: 'salonVenueSec', label: 'Barber Presence & Interaction', opts: salonBarberStaff, def: 0 },
-  haircutMotion10s: { section: 'salonStageSec', label: '10-Second Haircut Motion Choreography', opts: haircutMotion10s, def: 0 },
-  haircutStyle: { section: 'salonHairSec', label: 'Haircut Blueprint & Silhouette', opts: haircutStyle, def: 0 },
-  hairTextureState: { section: 'salonHairSec', label: 'Hair Moisture & Fiber Texture', opts: hairTextureState, def: 0 },
-  salonCape: { section: 'salonCameraSec', label: 'Cutting Cape & Fallen Clippings', opts: salonCape, def: 0 },
-  salonCameraMotion: { section: 'salonCameraSec', label: 'Camera Trajectory & Mirror POV', opts: salonCameraMotion, def: 0 },
-  salonLighting: { section: 'salonCameraSec', label: 'Salon Lighting & Vanity Glow', opts: salonLighting, def: 0 }
+  haircut: { section: 'haircut', label: 'Haircut & Baseline Cut', opts: haircut, def: 0 },
+  hairState: { section: 'haircut', label: 'Hair Moisture & Preparation State', opts: hairState, def: 0 },
+  venue: { section: 'venue', label: 'Salon Interior & Ambiance', opts: venue, def: 0 },
+  lighting: { section: 'venue', label: 'Vanity & Salon Illumination', opts: lighting, def: 0 },
+  barber: { section: 'session', label: 'Barber & Stylist Presence', opts: barber, def: 0 },
+  salonCape: { section: 'session', label: 'Cape & Fallen Clippings', opts: cape, def: 0 },
+  choreographyBarber: { section: 'motion', label: '10s Haircut Choreography Arc', opts: choreographyBarber, def: 0 },
+  choreographySolo: { section: 'motion', label: '10s Solo Reveal Choreography Arc', opts: choreographySolo, def: 0 },
+  cameraMotion: { section: 'camera', label: '10s Camera Trajectory', opts: cameraMotion, def: 0 }
 };
 
 Object.entries(fields).forEach(([k, f]) => {
   values[k] = f.opts[f.def || 0];
 });
 
+// Presets
 const presets = [
   {
-    title: 'Precision Scissor Snip & Falling Hair',
-    icon: '✂️',
-    sub: 'Damp French Bob · Shears & Comb · Mirror POV',
+    title: 'Precision Scissor Snip & Fallen Clippings',
+    icon: '&#9986;',
+    sub: 'Barber Session &bull; Wet Hair &bull; Fallen Clippings on Cape',
+    mode: 'barber',
     set: {
-      salonVenue: salonVenue[0], salonBarberStaff: salonBarberStaff[0],
-      haircutMotion10s: haircutMotion10s[0], haircutStyle: haircutStyle[0],
-      hairTextureState: hairTextureState[0], salonCape: salonCape[0],
-      salonCameraMotion: salonCameraMotion[0], salonLighting: salonLighting[0]
+      haircut: haircut[0], hairState: hairState[0], venue: venue[0], lighting: lighting[0],
+      barber: barber[0], salonCape: cape[0], choreographyBarber: choreographyBarber[0], cameraMotion: cameraMotion[0]
     }
   },
   {
-    title: '360° Hydraulic Chair Swivel Reveal',
-    icon: '💈',
-    sub: 'Wolf Cut · 360° Spin · Warm Vanity Light',
+    title: '360° Swivel Chair Spin (Solo Client)',
+    icon: '&#128260;',
+    sub: 'Solo Makeover &bull; Swivel Spin &bull; Zero Barber / Shears',
+    mode: 'solo',
     set: {
-      salonVenue: salonVenue[1], salonBarberStaff: salonBarberStaff[2],
-      haircutMotion10s: haircutMotion10s[2], haircutStyle: haircutStyle[1],
-      hairTextureState: hairTextureState[1], salonCape: salonCape[0],
-      salonCameraMotion: salonCameraMotion[1], salonLighting: salonLighting[0]
+      haircut: haircut[1], hairState: hairState[1], venue: venue[1], lighting: lighting[1],
+      choreographySolo: choreographySolo[0], cameraMotion: cameraMotion[2]
     }
   },
   {
-    title: 'Blow-Dryer Bounce & Silky Volume',
-    icon: '💨',
-    sub: 'Long Layers · Ceramic Brush · Studio Daylight',
+    title: 'Voluminous Round-Brush Blowout',
+    icon: '&#128168;',
+    sub: 'Barber Blow-dry &bull; Hot Air Bounce &bull; Silky Flow',
+    mode: 'barber',
     set: {
-      salonVenue: salonVenue[1], salonBarberStaff: salonBarberStaff[1],
-      haircutMotion10s: haircutMotion10s[1], haircutStyle: haircutStyle[2],
-      hairTextureState: hairTextureState[1], salonCape: salonCape[1],
-      salonCameraMotion: salonCameraMotion[2], salonLighting: salonLighting[1]
+      haircut: haircut[2], hairState: hairState[0], venue: venue[2], lighting: lighting[0],
+      barber: barber[0], salonCape: cape[1], choreographyBarber: choreographyBarber[2], cameraMotion: cameraMotion[1]
     }
   },
   {
-    title: 'Rear Mirror Symmetry Check',
-    icon: '🪞',
-    sub: 'Blunt Lob · Hand-Mirror · Heritage Salon',
+    title: 'Finished Makeover Mirror Check (Solo Client)',
+    icon: '&#129524;',
+    sub: 'Solo Client &bull; Root Fluff &bull; Satisfied Smile',
+    mode: 'solo',
     set: {
-      salonVenue: salonVenue[2], salonBarberStaff: salonBarberStaff[0],
-      haircutMotion10s: haircutMotion10s[4], haircutStyle: haircutStyle[3],
-      hairTextureState: hairTextureState[2], salonCape: salonCape[0],
-      salonCameraMotion: salonCameraMotion[0], salonLighting: salonLighting[2]
+      haircut: haircut[0], hairState: hairState[1], venue: venue[0], lighting: lighting[0],
+      choreographySolo: choreographySolo[1], cameraMotion: cameraMotion[0]
     }
   }
 ];
 
 const el = id => document.getElementById(id);
 
+// Render Tabs
 function renderTabs() {
   const tabsEl = el('tabs');
   tabsEl.innerHTML = '';
@@ -387,101 +439,158 @@ function goSection(secId) {
   const s = sections.find(x => x.id === secId);
   if (!s) return;
   const idx = sections.indexOf(s);
-  el('stepEyebrow').textContent = `Motion Direction · 0${idx+1}`;
+  el('stepEyebrow').textContent = `Motion Direction &bull; 0${idx+1}`;
   el('stepTitle').textContent = s.name;
   el('stepDescription').textContent = s.desc;
-  el('stepIcon').textContent = s.icon;
+  el('stepIcon').innerHTML = s.icon;
   el('stepCount').textContent = `Step ${idx+1} of ${sections.length}`;
   renderTabs();
   renderFields();
 }
 
+function createSelectField(id, f) {
+  const wrap = document.createElement('div');
+  wrap.className = 'field full';
+
+  const labelRow = document.createElement('div');
+  labelRow.className = 'label-row';
+  labelRow.innerHTML = `<label>${f.label}</label><span class="option-count">${f.opts.length} choices</span>`;
+  wrap.appendChild(labelRow);
+
+  const custom = document.createElement('div');
+  custom.className = 'custom-select';
+
+  const trigger = document.createElement('button');
+  trigger.type = 'button';
+  trigger.className = 'select-trigger';
+  trigger.innerHTML = `<span class="current">${values[id]?.label || f.opts[0].label}</span><span class="chevron">&#9662;</span>`;
+
+  const menu = document.createElement('div');
+  menu.className = 'select-menu';
+
+  const search = document.createElement('input');
+  search.type = 'text';
+  search.className = 'select-search';
+  search.placeholder = `Search ${f.label.toLowerCase()}...`;
+  menu.appendChild(search);
+
+  const list = document.createElement('div');
+  list.className = 'option-list';
+
+  f.opts.forEach(opt => {
+    const b = document.createElement('button');
+    b.type = 'button';
+    b.className = `choice ${values[id]?.label === opt.label ? 'selected' : ''}`;
+    b.innerHTML = `<span>${opt.label}</span>${values[id]?.label === opt.label ? '<span class="checkmark">&#10003;</span>' : ''}`;
+    b.addEventListener('click', () => {
+      values[id] = opt;
+      trigger.querySelector('.current').textContent = opt.label;
+      custom.classList.remove('open');
+      buildPrompt();
+    });
+    list.appendChild(b);
+  });
+
+  search.addEventListener('input', () => {
+    const q = search.value.toLowerCase().trim();
+    list.querySelectorAll('.choice').forEach(c => {
+      c.style.display = c.textContent.toLowerCase().includes(q) ? 'block' : 'none';
+    });
+  });
+
+  menu.appendChild(list);
+  custom.appendChild(trigger);
+  custom.appendChild(menu);
+
+  trigger.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const wasOpen = custom.classList.contains('open');
+    document.querySelectorAll('.custom-select.open').forEach(x => x.classList.remove('open'));
+    if (!wasOpen) {
+      custom.classList.add('open');
+      search.value = '';
+      list.querySelectorAll('.choice').forEach(c => c.style.display = 'block');
+      search.focus();
+    }
+  });
+
+  wrap.appendChild(custom);
+  return wrap;
+}
+
 function renderFields() {
   const host = el('fields');
+  const fineArea = el('fineTuneArea');
   host.innerHTML = '';
+  fineArea.innerHTML = '';
 
   if (activeSection === 'finish') {
     renderFinishSection(host);
     return;
   }
 
-  const secFields = Object.entries(fields).filter(([k, f]) => f.section === activeSection);
+  // Session mode switcher
+  if (activeSection === 'session') {
+    const toggleCard = document.createElement('div');
+    toggleCard.className = 'session-mode-toggle';
+    toggleCard.innerHTML = `
+      <div>
+        <strong>Session Architecture</strong>
+        <p>Choose between an active haircut with barber or a solo client celebration.</p>
+      </div>
+      <div class="seg-control">
+        <button type="button" class="seg-btn ${sessionMode === 'barber' ? 'active' : ''}" id="btnModeBarber">Barber Haircut Session</button>
+        <button type="button" class="seg-btn ${sessionMode === 'solo' ? 'active' : ''}" id="btnModeSolo">Solo Client Reveal</button>
+      </div>
+    `;
+    toggleCard.querySelector('#btnModeBarber').addEventListener('click', () => {
+      sessionMode = 'barber';
+      renderFields();
+      buildPrompt();
+      toast('Switched to Barber Haircut Session (Barber & Cape active).');
+    });
+    toggleCard.querySelector('#btnModeSolo').addEventListener('click', () => {
+      sessionMode = 'solo';
+      renderFields();
+      buildPrompt();
+      toast('Switched to Solo Client Reveal (Zero Barber / Scissors).');
+    });
+    host.appendChild(toggleCard);
+  }
+
+  // Filter fields
+  const secFields = Object.entries(fields).filter(([k, f]) => {
+    if (f.section !== activeSection) return false;
+    if (activeSection === 'session' && sessionMode === 'solo') return false; // Hide barber and cape when solo!
+    if (activeSection === 'motion') {
+      if (sessionMode === 'barber' && k === 'choreographySolo') return false;
+      if (sessionMode === 'solo' && k === 'choreographyBarber') return false;
+    }
+    return true;
+  });
+
+  if (activeSection === 'session' && sessionMode === 'solo') {
+    const callout = document.createElement('div');
+    callout.className = 'hero-note';
+    callout.style.marginTop = '10px';
+    callout.innerHTML = `
+      <div>
+        <strong>Solo Client Mode Active</strong>
+        <p>The client is completely alone in the salon chair. Zero barber, stylist hands, or scissors cutting hair. Perfect for post-makeover chair spins and celebration.</p>
+      </div>
+    `;
+    host.appendChild(callout);
+  }
 
   secFields.forEach(([id, f]) => {
-    const wrap = document.createElement('div');
-    wrap.className = `field ${id === 'haircutMotion10s' || id === 'salonCameraMotion' ? 'full' : ''}`;
-
-    const labelRow = document.createElement('div');
-    labelRow.className = 'label-row';
-    labelRow.innerHTML = `<label>${f.label}</label><span class="option-count">${f.opts.length} choices</span>`;
-    wrap.appendChild(labelRow);
-
-    const custom = document.createElement('div');
-    custom.className = 'custom-select';
-
-    const trigger = document.createElement('button');
-    trigger.type = 'button';
-    trigger.className = 'select-trigger';
-    trigger.innerHTML = `<span class="current">${values[id]?.label || f.opts[0].label}</span><span class="chevron">⌄</span>`;
-
-    const menu = document.createElement('div');
-    menu.className = 'select-menu';
-
-    const search = document.createElement('input');
-    search.type = 'text';
-    search.className = 'select-search';
-    search.placeholder = `Search ${f.label.toLowerCase()}...`;
-    menu.appendChild(search);
-
-    const list = document.createElement('div');
-    list.className = 'option-list';
-
-    f.opts.forEach(opt => {
-      const b = document.createElement('button');
-      b.type = 'button';
-      b.className = `choice ${values[id]?.label === opt.label ? 'selected' : ''}`;
-      b.innerHTML = `<span>${opt.label}</span>${values[id]?.label === opt.label ? '<span class="checkmark">✓</span>' : ''}`;
-      b.addEventListener('click', () => {
-        values[id] = opt;
-        trigger.querySelector('.current').textContent = opt.label;
-        custom.classList.remove('open');
-        buildPrompt();
-      });
-      list.appendChild(b);
-    });
-
-    search.addEventListener('input', () => {
-      const q = search.value.toLowerCase().trim();
-      list.querySelectorAll('.choice').forEach(c => {
-        c.style.display = c.textContent.toLowerCase().includes(q) ? 'block' : 'none';
-      });
-    });
-
-    menu.appendChild(list);
-    custom.appendChild(trigger);
-    custom.appendChild(menu);
-
-    trigger.addEventListener('click', (e) => {
-      e.stopPropagation();
-      const wasOpen = custom.classList.contains('open');
-      document.querySelectorAll('.custom-select.open').forEach(x => x.classList.remove('open'));
-      if (!wasOpen) {
-        custom.classList.add('open');
-        search.value = '';
-        list.querySelectorAll('.choice').forEach(c => c.style.display = 'block');
-        search.focus();
-      }
-    });
-
-    wrap.appendChild(custom);
-    host.appendChild(wrap);
+    host.appendChild(createSelectField(id, f));
   });
 }
 
 function renderFinishSection(host) {
   const wrap = document.createElement('div');
   wrap.className = 'field full';
-  wrap.innerHTML = `<div class="label-row"><label>Salon 10-Second Video Guardrails & Temporal Stability</label></div>`;
+  wrap.innerHTML = `<div class="label-row"><label>10-Second Haircut Consistency &amp; Anti-Warp Guardrails</label></div>`;
 
   const checksDiv = document.createElement('div');
   checksDiv.className = 'checks';
@@ -511,6 +620,7 @@ document.addEventListener('click', () => {
   document.querySelectorAll('.custom-select.open').forEach(x => x.classList.remove('open'));
 });
 
+// Render Presets
 function renderPresets() {
   const pHost = el('presets');
   pHost.innerHTML = '';
@@ -524,94 +634,123 @@ function renderPresets() {
       <small>${p.sub}</small>
     `;
     card.addEventListener('click', () => {
+      if (p.mode) sessionMode = p.mode;
       Object.assign(values, p.set);
       renderFields();
       buildPrompt();
-      toast(`Applied salon motion: ${p.title}`);
+      toast(`Applied 10s salon motion: ${p.title}`);
     });
     pHost.appendChild(card);
   });
 }
 
+// Build Prompt
 function buildPrompt() {
+  el('sessionStatus').innerHTML = sessionMode === 'solo'
+    ? `<span class="solo-shield-badge">&#10003; Solo Client (Zero Barber / Shears)</span>`
+    : `<span style="color:var(--muted); font-size:11px;">Barber Session</span>`;
+
+  // Sanitize venue if noMirror is checked
+  let venueText = values.venue?.text || '';
+  let cameraText = values.cameraMotion?.text || '';
+  if (checkState.noMirror) {
+    venueText = venueText.replace(/mirrors/gi, 'architectural walls').replace(/mirror/gi, 'wall station');
+    cameraText = cameraText.replace(/and reflected in the illuminated mirror/gi, 'against the architectural backdrop');
+  }
+
+  // Active choreo
+  const choreo = sessionMode === 'solo'
+    ? (values.choreographySolo?.text || '')
+    : (values.choreographyBarber?.text || '');
+
+  // Beats
+  let beat1Prose = '';
+  let beat2Prose = '';
+  let beat3Prose = '';
+
+  if (sessionMode === 'barber') {
+    beat1Prose = `Video opens on the client seated in the styling chair wearing ${values.salonCape?.text || 'a draped black cape'}. Camera executes ${cameraText}. The barber positions comb and shears.`;
+    beat2Prose = `Core dynamic action: ${choreo}. Cut hair clippings fall realistically onto the draped nylon cape.`;
+    beat3Prose = `The barber completes the snip and steps back slightly. The client admires her fresh baseline in the mirror with an authentic satisfied smile as movement settles.`;
+  } else {
+    beat1Prose = `Video opens on the solitary female client seated in the styling chair. Camera executes ${cameraText}. Soft organic hair movement as she prepares to reveal her haircut.`;
+    beat2Prose = `Core dynamic action: ${choreo}. Zero hairdresser or stylist present; she moves with authentic candid confidence.`;
+    beat3Prose = `Camera settles into final framing. The client holds her captivating gaze with a bright celebratory smile, admiring her finished haircut silhouette.`;
+  }
+
+  el('beat1Text').textContent = `[00:00-00:03] ${beat1Prose}`;
+  el('beat2Text').textContent = `[00:03-00:07] ${beat2Prose}`;
+  el('beat3Text').textContent = `[00:07-00:10] ${beat3Prose}`;
+
   const lines = [];
-  const checks = [];
-
-  if (checkState.identity) checks.push('Strictly preserve the same adult woman from the reference image, retaining her recognizable facial bone structure, warm Indian skin tone, and eye shape across all 10 seconds.');
-  if (checkState.maleBarber) checks.push('Solitary female rule: The client in the styling chair is strictly the only woman in the scene. The hair stylist/barber interacting with her is exclusively male.');
-  if (checkState.hairRealism) checks.push('Render authentic hair strand density with realistic physical clumping of wet strands and visible cut hair clippings falling onto the cape without digital artifacts.');
-  if (checkState.mirrorAccuracy) checks.push('Plausible optical reflection geometry: Mirror reflections accurately reflect the chair, model posture, and barber hands without duplicate subjects or weird distortions.');
-  if (checkState.antiWarp) checks.push('Temporal coherence: Zero tool morphing, no bending metal scissors, no rubbery fingers, and no flickering background mirrors across the entire 10-second duration.');
-
-  const choreo = values.haircutMotion10s?.text || '';
-
-  // Update visual timeline widget
-  el('beat1Text').textContent = `[00:00-00:03] Starting from reference image in styling chair. ${values.salonCape?.text || ''}. Barber enters position.`;
-  el('beat2Text').textContent = `[00:03-00:07] Core haircut apex: ${choreo}. ${values.salonCameraMotion?.text || ''}.`;
-  el('beat3Text').textContent = `[00:07-00:10] Haircut finish & settle: Barber combs freshly trimmed perimeter; subject gazes into the mirror with a satisfied smile.`;
 
   if (outputFormat === 'timeline') {
     lines.push('REFERENCE-IMAGE TO 10-SECOND REALISTIC SALON HAIRCUT VIDEO');
     lines.push('');
     lines.push('INITIAL FRAME ANCHOR (00:00):');
-    lines.push('• Begins seamlessly from the reference image, locking the female model\'s identity and facial structure in the salon styling chair.');
-    lines.push('');
-    lines.push('SALON VENUE & SETTING:');
-    lines.push(`• Establishment: ${values.salonVenue?.text || ''}.`);
-    lines.push(`• Barber Presence: ${values.salonBarberStaff?.text || ''}.`);
-    lines.push(`• Cutting Cape & Draped Hair: ${values.salonCape?.text || ''}.`);
-    lines.push('');
-    lines.push('HAIRCUT STYLE & FIBER TEXTURE:');
-    lines.push(`• Haircut Blueprint: ${values.haircutStyle?.text || ''}.`);
-    lines.push(`• Hair Fiber & Moisture State: ${values.hairTextureState?.text || ''}.`);
+    lines.push('• Begins seamlessly from the reference image, locking the female model's recognizable facial structure, Indian heritage, and hair texture in the styling chair.');
+    lines.push(`• Setting & Venue: ${venueText}.`);
+    if (sessionMode === 'barber') {
+      lines.push(`• Barber Interaction: ${values.barber?.text || ''}. (Solitary Female Model Rule: zero secondary women).`);
+      lines.push(`• Cape Detail: ${values.salonCape?.text || ''}.`);
+    } else {
+      lines.push('• Solo Client Rule: Strictly solo female subject only; zero hairdresser, barber, stylist, or secondary person in the scene.');
+    }
     lines.push('');
     lines.push('10-SECOND SYNCHRONIZED HAIRCUT TEMPORAL ARC:');
-    lines.push('[00:00 - 00:03 | BEAT 1 - CHAIR ANCHOR & PREPARATION]:');
-    lines.push(`The video opens on the client seated comfortably in the styling chair, ${values.salonCape?.text || ''}. ${values.salonCameraMotion?.text || ''}. The barber positions his comb at her hair parting.`);
+    lines.push(`[00:00 - 00:03 | BEAT 1 - CHAIR ANCHOR & PREPARATION]:`);
+    lines.push(beat1Prose);
     lines.push('');
-    lines.push('[00:03 - 00:07 | BEAT 2 - HAIRCUT ACTION APEX]:');
-    lines.push(`The dynamic haircut action unfolds: ${choreo}. Authentic physics of scissors snipping hair strands, fine clippings scattering on the cape, and natural head tilt.`);
+    lines.push(`[00:03 - 00:07 | BEAT 2 - HAIRCUT ACTION APEX]:`);
+    lines.push(beat2Prose);
     lines.push('');
-    lines.push('[00:07 - 00:10 | BEAT 3 - MIRROR GAZE & RESOLUTION]:');
-    lines.push('The barber completes the motion pass and combs her perimeter smooth. The model raises her chin, catching her reflection in the salon mirror with an authentic approving smile as the camera settles.');
+    lines.push(`[00:07 - 00:10 | BEAT 3 - MIRROR GAZE & RESOLUTION]:`);
+    lines.push(beat3Prose);
+    lines.push('');
+    lines.push('HAIRCUT SILHOUETTE & CONTINUITY:');
+    lines.push(`• Haircut Blueprint: ${values.haircut?.text || ''}.`);
+    lines.push(`• Hair Fiber State: ${values.hairState?.text || ''}.`);
     lines.push('');
     lines.push('CINEMATOGRAPHY & LIGHTING:');
-    lines.push(`• Camera Trajectory: ${values.salonCameraMotion?.text || ''}. Aspect ratio: ${activeRatio}. Cadence: ${activeFps}. Motion Intensity: ${activeMotion}.`);
-    lines.push(`• Salon Lighting: ${values.salonLighting?.text || ''}.`);
+    lines.push(`• Camera Trajectory: ${cameraText}. Aspect ratio: ${activeRatio}. Cadence: ${activeFps}. Motion Intensity: ${activeMotion}.`);
+    lines.push(`• Salon Lighting: ${values.lighting?.text || ''}.`);
     lines.push('');
-    lines.push('TEMPORAL PRESERVATION & REALISM RULES:');
-    checks.forEach(c => lines.push(`• ${c}`));
+    lines.push('TEMPORAL PRESERVATION CONSTRAINTS:');
+    lines.push('• Strict identity lock to reference image, 24fps cinematic motion blur, natural physical momentum, realistic wet hair clumping, and temporal tool consistency with zero warping across all 10 seconds.');
   } else if (outputFormat === 'fluid') {
-    lines.push(`A realistic 10-second documentary-style salon video starting from the reference image. The video features the same adult woman seated in a styling chair within ${values.salonVenue?.text || ''}. She is draped in ${values.salonCape?.text || ''}. Throughout the video, ${values.salonBarberStaff?.text || ''} works on her hair. Her haircut is ${values.haircutStyle?.text || ''}, with ${values.hairTextureState?.text || ''}. Across the 10-second duration, ${choreo}. Filmed with ${values.salonCameraMotion?.text || ''} under ${values.salonLighting?.text || ''}. In the final 3 seconds, she inspects her reflection in the mirror with a subtle, radiant smile. Strict identity preservation with natural human motion cadence, 24fps film motion blur, and zero tool morphing.`);
+    const sessionDetail = sessionMode === 'barber'
+      ? `She is seated in a styling chair wearing ${values.salonCape?.text || 'a draped black cape'} as ${values.barber?.text || 'an experienced barber'} works attentively. Over 10 seconds: between 00:00 and 00:03, camera initiates ${cameraText}; between 00:03 and 00:07, ${choreo}; from 00:07 to 00:10, movement settles as she admires the crisp baseline with an authentic smile.`
+      : `She is seated solo in the styling chair with zero other people in the frame. Over 10 seconds: between 00:00 and 00:03, camera initiates ${cameraText}; between 00:03 and 00:07, ${choreo}; from 00:07 to 00:10, movement settles as she locks a confident smile with the camera, admiring her finished haircut silhouette.`;
+
+    lines.push(`A seamless 10-second realistic salon haircut video starting from the reference image anchor, preserving the exact adult woman with warm Indian skin tone and facial identity throughout. Showcasing ${values.haircut?.text || ''} in a state where ${values.hairState?.text || ''}. ${sessionDetail} Set within ${venueText} illuminated by ${values.lighting?.text || ''}. Ratio: ${activeRatio}, 24fps cinematic cadence, temporal stability with zero warping or morphing.`);
   } else {
-    lines.push('DIRECTOR\'S TECHNICAL SHOT SHEET · 10-SECOND SALON I2V');
-    lines.push(`SETTING: ${values.salonVenue?.text || ''} | RATIO: ${activeRatio} | CADENCE: ${activeFps} | INTENSITY: ${activeMotion}`);
-    lines.push(`CLIENT: Reference image female model (Strict identity preservation)`);
-    lines.push(`BARBER: ${values.salonBarberStaff?.text || ''}`);
-    lines.push(`HAIRCUT & STATE: ${values.haircutStyle?.text || ''} | ${values.hairTextureState?.text || ''}`);
-    lines.push(`10S ARC: 00:00-00:03 (Establish Chair & Cape) -> 00:03-00:07 (Scissor/Comb Action Apex) -> 00:07-00:10 (Mirror Inspection Settle)`);
-    lines.push(`CORE ACTION: ${choreo}`);
-    lines.push(`CAPE & CLIPPINGS: ${values.salonCape?.text || ''}`);
-    lines.push(`CAMERA & LIGHT: ${values.salonCameraMotion?.text || ''} | ${values.salonLighting?.text || ''}`);
-    lines.push(`GUARDRAILS: ${checks.join(' ')}`);
+    lines.push('DIRECTOR'S TECHNICAL SHOT SHEET • 10-SECOND SALON I2V');
+    lines.push(`PROJECT: Salon Haircut 10s Clip | RATIO: ${activeRatio} | CADENCE: ${activeFps} | INTENSITY: ${activeMotion}`);
+    lines.push(`MODE: ${sessionMode === 'barber' ? 'Barber Haircut Session' : 'Solo Client Reveal'}`);
+    lines.push(`HAIRCUT: ${values.haircut?.text || ''} | ${values.hairState?.text || ''}`);
+    lines.push(`ACTION: ${choreo}`);
+    lines.push(`CAMERA: ${cameraText}`);
+    lines.push(`VENUE & LIGHT: ${venueText} | ${values.lighting?.text || ''}`);
+    lines.push(`GUARDRAILS: Strict identity preservation, 24fps cinematic motion blur, zero warping.`);
   }
 
   const promptText = lines.join('\n');
   el('prompt').value = promptText;
+  el('prompt').textContent = promptText;
 
   const words = promptText.trim().split(/\s+/).length;
-  el('wordCount').textContent = `${words} words · ${promptText.length} chars · 10-Sec Salon Video (${activeRatio})`;
+  el('wordCount').textContent = `${words} words • ${promptText.length} chars • 10-Sec Video (${activeRatio})`;
 
   const sumEl = el('summary');
   sumEl.innerHTML = `
-    <span class="summary-tag">${values.haircutStyle?.label?.split(' ')[0] || 'Haircut'}</span>
-    <span class="summary-tag">Salon Cape</span>
+    <span class="summary-tag">${values.haircut?.label?.split(' ')[0] || 'Haircut'}</span>
+    <span class="summary-tag">${sessionMode === 'barber' ? 'Barber Session' : 'Solo Client'}</span>
     <span class="summary-tag">${activeRatio}</span>
     <span class="summary-tag">${activeFps}</span>
-    <span class="summary-tag">10s Video</span>
   `;
 }
 
+// Toast
 function toast(msg) {
   const t = el('toast');
   t.textContent = msg;
@@ -620,6 +759,7 @@ function toast(msg) {
   t.classList.add('flash');
 }
 
+// Navigation
 el('prevStep')?.addEventListener('click', () => {
   const idx = sections.findIndex(s => s.id === activeSection);
   if (idx > 0) goSection(sections[idx - 1].id);
@@ -630,216 +770,180 @@ el('nextStep')?.addEventListener('click', () => {
   if (idx < sections.length - 1) goSection(sections[idx + 1].id);
 });
 
+// Output Format Controls
+function updateModeButtons() {
+  el('btnTimelineMode').className = `seg-btn ${outputFormat === 'timeline' ? 'active' : ''}`;
+  el('btnFluidMode').className = `seg-btn ${outputFormat === 'fluid' ? 'active' : ''}`;
+  el('btnDirectorMode').className = `seg-btn ${outputFormat === 'director' ? 'active' : ''}`;
+}
+
 el('btnTimelineMode')?.addEventListener('click', () => {
   outputFormat = 'timeline';
   updateModeButtons();
   buildPrompt();
-  toast('Switched to 10s Timeline Script Format.');
+  toast('Switched to 10s Timeline Script Format (3-Beat).');
 });
 
 el('btnFluidMode')?.addEventListener('click', () => {
   outputFormat = 'fluid';
   updateModeButtons();
   buildPrompt();
-  toast('Switched to Continuous Fluid Prose Format.');
+  toast('Switched to Fluid Cinematic Prose Format.');
 });
 
 el('btnDirectorMode')?.addEventListener('click', () => {
   outputFormat = 'director';
   updateModeButtons();
   buildPrompt();
-  toast('Switched to Director\'s Technical Cue Format.');
+  toast('Switched to Director Technical Cue Format.');
 });
 
-function updateModeButtons() {
-  el('btnTimelineMode').classList.toggle('active', outputFormat === 'timeline');
-  el('btnFluidMode').classList.toggle('active', outputFormat === 'fluid');
-  el('btnDirectorMode').classList.toggle('active', outputFormat === 'director');
-}
-
+// Ratio chips
 document.querySelectorAll('#ratioChips .ratio-chip').forEach(btn => {
   btn.addEventListener('click', () => {
-    document.querySelectorAll('#ratioChips .ratio-chip').forEach(x => x.classList.remove('active'));
+    document.querySelectorAll('#ratioChips .ratio-chip').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
     activeRatio = btn.dataset.ratio;
     buildPrompt();
-    toast(`Aspect ratio set to ${activeRatio}.`);
   });
 });
 
+// FPS chips
 document.querySelectorAll('#fpsChips .ratio-chip').forEach(btn => {
   btn.addEventListener('click', () => {
-    document.querySelectorAll('#fpsChips .ratio-chip').forEach(x => x.classList.remove('active'));
+    document.querySelectorAll('#fpsChips .ratio-chip').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
     activeFps = btn.dataset.fps;
     buildPrompt();
-    toast(`Framerate set to ${activeFps}.`);
   });
 });
 
+// Motion chips
 document.querySelectorAll('#motionChips .ratio-chip').forEach(btn => {
   btn.addEventListener('click', () => {
-    document.querySelectorAll('#motionChips .ratio-chip').forEach(x => x.classList.remove('active'));
+    document.querySelectorAll('#motionChips .ratio-chip').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
     activeMotion = btn.dataset.motion;
     buildPrompt();
-    toast(`Motion intensity set to ${activeMotion}.`);
   });
 });
 
-function copyPrompt() {
-  const text = el('prompt').value;
-  navigator.clipboard.writeText(text).then(() => {
-    recordHistory();
-    toast('✓ 10-Second Salon Prompt copied to clipboard!');
-  });
-}
-el('copy')?.addEventListener('click', copyPrompt);
-el('copyTop')?.addEventListener('click', copyPrompt);
+// Action buttons
+el('copy')?.addEventListener('click', () => {
+  navigator.clipboard.writeText(el('prompt').value);
+  toast('10s salon prompt copied to clipboard!');
+  saveHistory(el('prompt').value);
+});
+
+el('copyTop')?.addEventListener('click', () => {
+  navigator.clipboard.writeText(el('prompt').value);
+  toast('10s salon prompt copied to clipboard!');
+  saveHistory(el('prompt').value);
+});
 
 el('copyNegative')?.addEventListener('click', () => {
-  const neg = "secondary female stylists, duplicate faces, morphing scissors, melting comb, deformed hands, extra fingers, cartoon, 3d render, plastic skin, unnatural head spin, glitchy hair, watermark, text";
-  navigator.clipboard.writeText(neg).then(() => {
-    toast('✓ Salon Video Negative Constraints copied to clipboard!');
-  });
+  const neg = 'blurry, low resolution, morphing shears, extra fingers, deformed scissors, rubbery hands, double heads, cloned faces, unnatural plastic hair, 3D CGI, sped up frantic motion, flickering mirrors, bad anatomy, text, watermark';
+  navigator.clipboard.writeText(neg);
+  toast('Salon negative constraints copied!');
 });
 
 el('download')?.addEventListener('click', () => {
   const blob = new Blob([el('prompt').value], { type: 'text/plain' });
+  const url = URL.createObjectURL(blob);
   const a = document.createElement('a');
-  a.href = URL.createObjectURL(blob);
-  a.download = `kinetix_10s_salon_prompt_${Date.now()}.txt`;
+  a.href = url;
+  a.download = `kinetix_salon_${activeRatio.replace(':', 'x')}_10s.txt`;
   a.click();
-  toast('Prompt file downloaded.');
+  URL.revokeObjectURL(url);
+  toast('Prompt downloaded as .txt');
 });
 
 el('selectPrompt')?.addEventListener('click', () => {
   el('prompt').select();
-  toast('All prompt text selected.');
+  toast('Prompt selected');
 });
 
 el('randomTop')?.addEventListener('click', () => {
   Object.keys(fields).forEach(k => {
-    const opts = fields[k].opts;
-    values[k] = opts[Math.floor(Math.random() * opts.length)];
+    const arr = fields[k].opts;
+    values[k] = arr[Math.floor(Math.random() * arr.length)];
   });
+  sessionMode = Math.random() > 0.4 ? 'barber' : 'solo';
   renderFields();
   buildPrompt();
-  toast('✦ Generated surprise 10s salon haircut motion!');
+  toast('Generated fresh random 10s salon direction!');
 });
 
 el('resetTop')?.addEventListener('click', () => {
-  Object.keys(fields).forEach(k => {
-    values[k] = fields[k].opts[fields[k].def || 0];
+  Object.entries(fields).forEach(([k, f]) => {
+    values[k] = f.opts[f.def || 0];
   });
+  sessionMode = 'barber';
   renderFields();
   buildPrompt();
-  toast('↺ Reset all selections to defaults.');
+  toast('Reset to default salon direction.');
 });
 
-el('shuffleLooks')?.addEventListener('click', () => {
-  renderPresets();
-  toast('Shuffled salon motion presets.');
-});
-
-function recordHistory() {
-  const t = el('prompt').value.trim();
-  if (!t) return;
-  if (!promptHistory.length || promptHistory[0].text !== t) {
-    promptHistory.unshift({ id: Date.now(), text: t, time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }), words: t.split(/\s+/).length });
-    if (promptHistory.length > 20) promptHistory.pop();
-    el('historyBadge').textContent = promptHistory.length;
+// History management
+function saveHistory(p) {
+  if (!p) return;
+  if (!promptHistory.includes(p)) {
+    promptHistory.unshift(p);
+    if (promptHistory.length > 15) promptHistory.pop();
   }
+  el('historyBadge').textContent = promptHistory.length;
 }
 
 el('openHistoryBtn')?.addEventListener('click', () => {
   const list = el('historyList');
   list.innerHTML = '';
-  if (!promptHistory.length) {
-    list.innerHTML = '<p style="color:var(--muted); font-size:12px; text-align:center; padding:20px;">No prompts saved in this session yet.</p>';
+  if (promptHistory.length === 0) {
+    list.innerHTML = '<p style="color:var(--muted); font-size:12px; padding:20px; text-align:center;">No prompts saved yet this session.</p>';
   } else {
-    promptHistory.forEach(item => {
-      const d = document.createElement('div');
-      d.className = 'history-item';
-      d.innerHTML = `
-        <div class="history-meta">
-          <span>${item.time} · ${item.words} words</span>
-          <button class="btn btn-secondary btn-small" style="padding:3px 8px; font-size:10px;">Load</button>
+    promptHistory.forEach((p, idx) => {
+      const item = document.createElement('div');
+      item.className = 'history-item';
+      item.innerHTML = `
+        <div class="history-item-head">
+          <strong>#${idx + 1} &bull; 10s Salon Motion</strong>
+          <button class="btn btn-secondary btn-small" type="button">Load</button>
         </div>
-        <div class="history-text">${item.text}</div>
+        <p class="history-item-snippet">${p.slice(0, 160)}...</p>
       `;
-      d.querySelector('button').addEventListener('click', () => {
-        el('prompt').value = item.text;
-        el('historyModal').classList.remove('active');
-        el('historyBackdrop').classList.remove('active');
-        toast('Loaded prompt from history.');
+      item.querySelector('button').addEventListener('click', () => {
+        el('prompt').value = p;
+        el('prompt').textContent = p;
+        el('historyModal').classList.remove('open');
+        el('historyBackdrop').classList.remove('open');
+        toast('Loaded prompt from history');
       });
-      list.appendChild(d);
+      list.appendChild(item);
     });
   }
-  el('historyModal').classList.add('active');
-  el('historyBackdrop').classList.add('active');
+  el('historyModal').classList.add('open');
+  el('historyBackdrop').classList.add('open');
 });
 
 el('closeHistoryBtn')?.addEventListener('click', () => {
-  el('historyModal').classList.remove('active');
-  el('historyBackdrop').classList.remove('active');
+  el('historyModal').classList.remove('open');
+  el('historyBackdrop').classList.remove('open');
 });
 el('historyBackdrop')?.addEventListener('click', () => {
-  el('historyModal').classList.remove('active');
-  el('historyBackdrop').classList.remove('active');
+  el('historyModal').classList.remove('open');
+  el('historyBackdrop').classList.remove('open');
 });
 el('clearHistoryBtn')?.addEventListener('click', () => {
   promptHistory = [];
   el('historyBadge').textContent = '0';
-  el('historyList').innerHTML = '<p style="color:var(--muted); font-size:12px; text-align:center; padding:20px;">History cleared.</p>';
+  el('historyList').innerHTML = '<p style="color:var(--muted); font-size:12px; padding:20px; text-align:center;">History cleared.</p>';
+  toast('History cleared');
 });
 
-function generateShareUrl() {
-  const state = {
-    v: Object.fromEntries(Object.entries(values).map(([k, v]) => [k, v.label])),
-    r: activeRatio,
-    f: activeFps,
-    m: activeMotion,
-    o: outputFormat
-  };
-  const str = btoa(encodeURIComponent(JSON.stringify(state)));
-  const url = `${window.location.origin}${window.location.pathname}#${str}`;
-  navigator.clipboard.writeText(url).then(() => {
-    toast('✓ Shareable salon link copied to clipboard!');
-  });
-}
-el('shareLookTop')?.addEventListener('click', generateShareUrl);
-el('shareLookBtn')?.addEventListener('click', generateShareUrl);
-
-function loadFromHash() {
-  if (window.location.hash.length > 1) {
-    try {
-      const raw = decodeURIComponent(atob(window.location.hash.slice(1)));
-      const state = JSON.parse(raw);
-      if (state.v) {
-        Object.entries(state.v).forEach(([k, label]) => {
-          if (fields[k]) {
-            const match = fields[k].opts.find(o => o.label === label);
-            if (match) values[k] = match;
-          }
-        });
-      }
-      if (state.r) activeRatio = state.r;
-      if (state.f) activeFps = state.f;
-      if (state.m) activeMotion = state.m;
-      if (state.o) outputFormat = state.o;
-    } catch(e) {}
-  }
-}
-
-loadFromHash();
+// Initialize
 renderTabs();
-goSection('salonVenueSec');
+renderFields();
 renderPresets();
-updateModeButtons();
 buildPrompt();
-
 })();
 </script>
 </body>
