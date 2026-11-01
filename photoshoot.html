@@ -1,0 +1,1008 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<title>Kinetix / Makeover Photoshoot 10-Second Video Studio</title>
+<link rel="stylesheet" href="css/shared.css">
+</head>
+<body>
+<div class="shell">
+<header class="topbar">
+  <div class="brand">
+    <span class="brand-mark">▶</span>
+    <span>Kinetix / Video Prompt Studio</span>
+  </div>
+  <nav class="suite-nav" aria-label="Studio Switcher">
+    <a href="index.html" class="suite-nav-link" title="Kinetix Hub">✦ Hub</a>
+    <a href="photoshoot.html" class="suite-nav-link active"><span class="studio-btn-icon">📸</span> Photoshoot</a>
+    <a href="salon.html" class="suite-nav-link"><span class="studio-btn-icon">💈</span> Salon & Barbershop</a>
+    <a href="makeup.html" class="suite-nav-link"><span class="studio-btn-icon">💄</span> Makeup & Beauty <span class="nav-badge">NEW</span></a>
+    <a href="tattoo.html" class="suite-nav-link"><span class="studio-btn-icon">🖋️</span> Tattoo Studio</a>
+  </nav>
+  <div class="top-meta">
+    <span class="pill"><span class="pill-dot-video"></span> 10s Timeline Choreography</span>
+    <span class="pill" id="totalOptionCount">1,800+ searchable motion choices</span>
+    <span class="pill">Offline · Zero Uploads</span>
+  </div>
+</header>
+
+<section class="hero">
+  <div>
+    <div class="eyebrow" id="heroEyebrow">Reference-Led Motion Direction · 10-Second Editorial Video</div>
+    <h1 id="heroTitle">Makeover <span>Photoshoot</span><br>10s Video Studio</h1>
+    <p id="heroDescription">Direct a confident, candid 10-second fashion editorial video starting from your reference image. Choreograph a 3-beat temporal arc (0-3s anchor, 3-7s apex motion/turn, 7-10s gaze settle), camera orbits, hair flutter physics, and modular separates with zero identity morphing.</p>
+    <div class="hero-actions">
+      <button class="btn btn-primary" id="randomTop">✦ Surprise me</button>
+      <button class="btn btn-secondary" id="copyTop">▣ Copy 10s prompt</button>
+      <button class="btn btn-secondary" id="shareLookTop" type="button">🔗 Share motion</button>
+      <button class="btn btn-quiet" id="resetTop">↺ Start over</button>
+    </div>
+  </div>
+  <aside class="hero-note">
+    <div class="sparkle">✧ ▶ ✧</div>
+    <div>
+      <strong>Temporal Continuity, Not Static Frames.</strong>
+      <p>Direct the entire 10-second video arc, camera trajectory, and hair aerodynamics. Every choice updates a synchronized timeline prompt in real time.</p>
+      <div class="tags">
+        <span class="tag">10s Beat Breakdown</span>
+        <span class="tag">Zero Identity Drift</span>
+        <span class="tag">Camera Orbits & Dollies</span>
+        <span class="tag">Hair Flutter Dynamics</span>
+      </div>
+    </div>
+  </aside>
+</section>
+
+<div class="layout">
+<main class="builder">
+  <section class="preset-strip">
+    <div class="strip-head">
+      <div>
+        <h2>Start with a 10-Second Creative Motion Direction</h2>
+        <p>Curated motion sequences across fashion, street, and cinematic lighting. Click one to apply its full 10-second choreography.</p>
+      </div>
+      <div class="strip-actions">
+        <button class="btn btn-secondary btn-small" id="saveCustomLook" type="button">⭐ Save motion</button>
+        <button class="btn btn-secondary btn-small" id="shuffleLooks" type="button">↻ Shuffle motions</button>
+      </div>
+    </div>
+    <div class="preset-grid" id="presets"></div>
+  </section>
+
+  <nav class="section-tabs" id="tabs" aria-label="Prompt builder sections"></nav>
+
+  <section class="step-card" id="stepCard">
+    <div class="step-head">
+      <div>
+        <div class="eyebrow" id="stepEyebrow">Motion Direction · 01</div>
+        <h2 id="stepTitle">Hair & makeover motion</h2>
+        <p id="stepDescription">Choose haircut styling, wind dynamics, and hair flutter across the 10 seconds.</p>
+      </div>
+      <div class="step-icon" id="stepIcon">✂</div>
+    </div>
+
+    <!-- Interactive 10s Timeline Preview Component -->
+    <div class="timeline-card" id="timelinePreview">
+      <div class="timeline-head">
+        <span class="timeline-badge">▶ 10-Second Choreographed Temporal Arc</span>
+        <small style="color: var(--muted); font-size: 11px;">Synchronized Video Beats</small>
+      </div>
+      <div class="timeline-track">
+        <div class="timeline-beat-card beat-1">
+          <div class="beat-time"><span style="color:var(--cyan)">00:00 - 00:03</span> · Beat 1: Anchor</div>
+          <div class="beat-label" id="beat1Text">Starting from reference photo anchor; gentle camera push-in and subtle hair flutter.</div>
+        </div>
+        <div class="timeline-beat-card beat-2">
+          <div class="beat-time"><span style="color:var(--accent-video)">00:03 - 00:07</span> · Beat 2: Apex Action</div>
+          <div class="beat-label" id="beat2Text">Dynamic head turn or catwalk stride; fabric ripples as wind catches hair.</div>
+        </div>
+        <div class="timeline-beat-card beat-3">
+          <div class="beat-time"><span style="color:var(--pink2)">00:07 - 00:10</span> · Beat 3: Resolution</div>
+          <div class="beat-label" id="beat3Text">Camera decelerates; subject holds confident magnetic gaze into the lens.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="field-grid" id="fields"></div>
+    <div id="fineTuneArea"></div>
+    <div id="specialContent"></div>
+    
+    <div class="step-foot">
+      <span class="step-count" id="stepCount">Step 1 of 7</span>
+      <div class="step-buttons">
+        <button class="btn btn-secondary" id="prevStep">← Previous</button>
+        <button class="btn btn-primary" id="nextStep">Next step →</button>
+      </div>
+    </div>
+  </section>
+</main>
+
+<aside class="preview">
+  <div class="preview-head">
+    <div class="preview-top">
+      <div class="eyebrow">10s Video Output</div>
+      <div class="preview-top-actions">
+        <button class="btn btn-secondary btn-small" id="openHistoryBtn" type="button" title="View prompt history">🕒 History <span class="badge" id="historyBadge">0</span></button>
+        <span class="live">Live Assembled</span>
+      </div>
+    </div>
+    <h2>10-Second Prompt, Assembled</h2>
+    <p>Choreographed specifically for AI video diffusion engines.</p>
+    <div class="summary" id="summary"></div>
+  </div>
+
+  <div class="preview-body">
+    <div class="preview-toolbar">
+      <div class="toolbar-row">
+        <div class="seg-control" id="modeSegControl">
+          <button type="button" class="seg-btn active" id="btnTimelineMode">Timeline Script</button>
+          <button type="button" class="seg-btn" id="btnFluidMode">Fluid Prose</button>
+          <button type="button" class="seg-btn" id="btnDirectorMode">Director's Cue</button>
+        </div>
+        <button class="btn btn-secondary btn-small" id="shareLookBtn" type="button" title="Copy shareable link">🔗 Share</button>
+      </div>
+
+      <div class="ratio-row">
+        <span class="ratio-label">Ratio:</span>
+        <div class="ratio-chips" id="ratioChips">
+          <button type="button" class="ratio-chip" data-ratio="16:9">16:9</button>
+          <button type="button" class="ratio-chip active" data-ratio="9:16">9:16 Reel</button>
+          <button type="button" class="ratio-chip" data-ratio="4:5">4:5</button>
+          <button type="button" class="ratio-chip" data-ratio="1:1">1:1</button>
+          <button type="button" class="ratio-chip" data-ratio="2.39:1">2.39:1</button>
+        </div>
+      </div>
+
+      <div class="ratio-row">
+        <span class="ratio-label">Cadence:</span>
+        <div class="ratio-chips" id="fpsChips">
+          <button type="button" class="ratio-chip active" data-fps="24fps">24 FPS Film</button>
+          <button type="button" class="ratio-chip" data-fps="30fps">30 FPS Video</button>
+          <button type="button" class="ratio-chip" data-fps="60fps">60 FPS Smooth</button>
+        </div>
+      </div>
+
+      <div class="ratio-row">
+        <span class="ratio-label">Motion:</span>
+        <div class="ratio-chips" id="motionChips">
+          <button type="button" class="ratio-chip" data-motion="Subtle (3/10)">Subtle (3)</button>
+          <button type="button" class="ratio-chip active" data-motion="Organic (5/10)">Organic (5)</button>
+          <button type="button" class="ratio-chip" data-motion="Dynamic (8/10)">Dynamic (8)</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="prompt-meta">
+      <span id="wordCount">Prompt ready</span>
+      <button class="btn btn-quiet btn-small" id="selectPrompt">Select all</button>
+    </div>
+
+    <textarea class="prompt-area" id="prompt" spellcheck="false" aria-label="Generated 10-second video prompt"></textarea>
+
+    <div class="preview-buttons">
+      <button class="btn btn-primary" id="copy">▣ Copy 10s prompt</button>
+      <button class="btn btn-secondary" id="download">↓ Download .txt</button>
+      <button class="btn btn-secondary span2" id="copyNegative">Copy video negative prompt</button>
+    </div>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </div>
+
+  <div class="preview-help">
+    <strong>How to use in AI Video generators:</strong> Upload your reference photo into Kling, Runway Gen-3, Luma Ray 2, or Hailuo Minimax as the <strong>First Frame / Image-to-Video Anchor</strong>. Set duration to <strong>10 seconds</strong>, then paste this prompt.
+  </div>
+</aside>
+</div>
+
+<!-- History Modal -->
+<div class="history-modal" id="historyModal">
+  <div class="history-head">
+    <div>
+      <h3>10s Video Prompt History</h3>
+      <p>Recent prompts and motions saved this session.</p>
+    </div>
+    <div>
+      <button class="btn-quiet btn-small" id="clearHistoryBtn" type="button">Clear</button>
+      <button class="btn-quiet btn-small" id="closeHistoryBtn" type="button">✕ Close</button>
+    </div>
+  </div>
+  <div class="history-list" id="historyList"></div>
+</div>
+<div class="modal-backdrop" id="historyBackdrop"></div>
+
+<p class="fineprint">KINETIX STUDIO · 10-Second Reference Image-to-Video Prompt Architecture · 100% Offline Client-Side</p>
+</div>
+
+<script>
+(()=>{
+// Helpers
+const O = (label, text=label, desc='', cat='General') => ({ label, text, desc, cat });
+
+// OPTION BANKS: Hair & Makeover
+const hair = [
+  O('Shoulder-length bob + wispy bangs', 'a freshly cut shoulder-length bob with soft wispy bangs, a deep side part and naturally feathered ends'),
+  O('Chin-length French bob', 'a chic chin-length French bob with airy texture and subtly tucked ends'),
+  O('Long bob / lob with relaxed wave', 'a polished collarbone-length long bob with relaxed organic movement'),
+  O('Feather cut + dramatic hair flip', 'a voluminous feather cut with cheekbone-framing layers and a fluid dramatic hair flip in motion'),
+  O('Butterfly layers + curtain fringe', 'a flowing butterfly cut with cheekbone-framing layers and wispy curtain bangs catching the breeze'),
+  O('Textured wolf cut', 'a bold shaggy wolf cut with choppy layers, soft fringe and lived-in kinetic movement'),
+  O('Bouncy 90s blowout', 'a bouncy 1990s-inspired voluminous blowout with layered ends floating with natural weight'),
+  O('Sleek high ponytail with natural sway', 'a sleek high ponytail with natural scalp tension, a wrapped base and an oscillating ponytail pendulum sway'),
+  O('Tousled beach waves', 'effortless tousled waves with natural irregularity and soft ocean-air movement'),
+  O('Sleek straight glass hair', 'sleek straight hair with a clean shine and silky strand separation falling flush against shoulders'),
+  O('Half-up half-down waves', 'a half-up hairstyle with softly cascading waves and delicate loose temple strands'),
+  O('Wet-look slicked-back editorial', 'a high-fashion wet-look style slicked back with realistic separated damp strands and organic moisture sheen')
+];
+
+const hairMotion = [
+  O('Gentle salon breeze (soft flutter)', 'strands gently flutter in a soft studio breeze with organic strand separation without heavy clumping'),
+  O('Dramatic slow-motion hair flip', 'hair sweeps smoothly across shoulders in a fluid 120fps slow-motion flip before falling gracefully back into place'),
+  O('Wind machine gust & billow', 'continuous fashion-shoot wind machine causing wispy curtain bangs and perimeter layers to billow dynamically'),
+  O('Organic pendulum sway as she walks', 'hair sways rhythmically side-to-side in natural sync with her walking strides'),
+  O('Gentle hand run through hair', 'subject lightly runs her manicured fingers through the roots, lifting volume as strands cascade through her fingers')
+];
+
+const hairColor = [
+  O('Keep reference hair color', 'the exact original hair color and root depth from the reference image'),
+  O('Deep natural black', 'deep natural black with subtle realistic highlights'),
+  O('Espresso brunette', 'rich espresso brunette with dark chocolate depth'),
+  O('Caramel ribbons', 'subtle caramel ribbons blended naturally through the dark lengths'),
+  O('Copper auburn', 'rich warm copper auburn catching studio rim light')
+];
+
+// OPTION BANKS: Wardrobe
+const outfitCategory = [
+  O('Modular separates (Crop top + Denim shorts)', 'separates'),
+  O('Editorial evening gown', 'gown'),
+  O('Tailored power suit', 'suit'),
+  O('Modern fusion / Saree', 'saree'),
+  O('Casual chic street look', 'casual')
+];
+
+const topPiece = [
+  O('White ribbed racerback crop tank', 'a crisp white ribbed racerback cropped tank top showing authentic athletic midriff contour'),
+  O('Vintage cropped graphic baby-tee', 'a vintage-wash cropped graphic baby-tee with contrast collar trim'),
+  O('Structured denim corset bustier', 'a structured indigo denim corset bustier with exposed metallic hardware'),
+  O('Black lace-trim satin crop cami', 'a delicate black silk-satin crop camisole with scalloped eyelash lace along the neckline'),
+  O('Asymmetric one-shoulder ribbed crop top', 'an asymmetric one-shoulder ribbed cotton crop top with architectural drape'),
+  O('Oversized unbuttoned white shirt over crop bralette', 'a crisp oversized white cotton shirt loosely unbuttoned and billowing over a minimalist black crop bralette')
+];
+
+const bottomPiece = [
+  O('Vintage cutoff denim shorts (frayed raw hem)', 'high-waisted vintage wash denim cutoff shorts with frayed raw hems and authentic denim grain'),
+  O('Distressed low-rise daisy dukes', 'low-slung distressed denim cutoff shorts with subtle whiskers and frayed hemline'),
+  O('Bleached relaxed denim cutoff jorts', 'relaxed knee-length bleached denim cutoff jorts with natural fabric drape'),
+  O('High-rise raw-edge Levi\'s cutoffs', 'classic vintage-blue high-rise denim cutoffs with raw-edge hems'),
+  O('Tailored high-waisted wide-leg trousers', 'flowing tailored black high-waisted wide-leg trousers that ripple gracefully with each step')
+];
+
+const midriffStyling = [
+  O('Natural athletic midriff contour', 'revealing authentic natural waist, toned midriff contour, and delicate navel detail with zero airbrushed smoothing'),
+  O('Layered gold belly chain accent', 'a delicate high-polish gold chain resting gracefully across the bare midriff, glinting as she moves'),
+  O('High-waist tuck with slight belt overlap', 'high-waisted waistband framing the natural waistline with an authentic leather belt')
+];
+
+const fullOutfit = [
+  O('Black sculptural evening dress', 'a striking black sculptural evening dress with confident lines and fluid floor-length movement'),
+  O('Crimson satin wrap gown with high slit', 'a vivid crimson satin gown with an elegant side slit, rippling liquid highlights as she walks'),
+  O('Tailored ivory blazer power suit', 'a sharply tailored ivory blazer worn open over a minimalist black silk top with wide-leg trousers'),
+  O('Modern metallic statement cocktail dress', 'a modern metallic bronze cocktail dress catching dynamic studio reflections as she turns')
+];
+
+const fabricMovement = [
+  O('Natural fluid fabric flutter', 'fabric ripples organically with subject motion and subtle atmospheric wind without synthetic stiffness'),
+  O('Heavy denim structure & creasing', 'authentic rigid denim creases and flexes naturally around hips and thighs during movement'),
+  O('Satin liquid billowing', 'silk-satin fabric catches light in flowing liquid waves as she pivots')
+];
+
+// OPTION BANKS: Makeup & Facial Performance
+const makeup = [
+  O('Editorial dewy glow & glossy nude lip', 'luminous dewy skin with authentic visible pores, soft blush on high cheekbones, feathered brow definition, and a high-shine glossy nude lip'),
+  O('Bold matte red lip & winged liner', 'a classic velvet-matte crimson red lip with crisp definition, winged cat-eye liquid liner, and a velvety skin complexion'),
+  O('Smoky bronze eye & berry gloss', 'rich smoky bronze eye shadow with subtle golden shimmer, smudged lower lashline, and deep berry lip gloss'),
+  O('Fresh minimalist clean-girl look', 'barely-there makeup emphasizing clean skin texture, naturally brushed brows, soft rosy tint, and clear lip balm')
+];
+
+const facialPerformance = [
+  O('Subtle knowing smirk to wide smile', 'starts with a poised direct stare, gradually softening as a subtle knowing smirk breaks into a warm candid smile'),
+  O('Intense high-fashion editorial gaze', 'maintains an unblinking, magnetic, razor-sharp editorial gaze into the lens with parted lips'),
+  O('Candid eye glance away and back', 'glances down and to the side thoughtfully before looking up directly into the camera with confident sparkle'),
+  O('Soft breath & parted lips', 'subtle chest rise and soft lip parting as she releases a candid breath between posing moments')
+];
+
+// OPTION BANKS: 10s Choreography & Poses
+const choreography10s = [
+  O('Catwalk stroll forward & confident 45° pivot', 'Catwalk Stride & Turn', 'Starts at medium full-body distance walking smoothly forward towards camera; at 00:04 slows stride and pivots 45 degrees, flicking hair over shoulder; at 00:08 holds a commanding stationary pose with hand on hip looking into lens'),
+  O('360° Slow Orbit with Gaze Lock', 'Orbital Gaze Lock', 'Subject stands poised with weight shifted on back leg; between 00:00 and 00:06 the camera smoothly arcs 180 degrees around her as her eyes stay locked with the lens; at 00:07 she softly smiles and turns her chin toward the light'),
+  O('Windblown Rooftop Turn & Hair Tuck', 'Windblown Turn & Tuck', 'Subject begins turned sideways looking out over skyline; at 00:03 wind sweeps hair across her cheek as she turns smoothly to face camera; at 00:06 lifts right hand to tuck hair behind ear; holds radiant candid expression until 00:10'),
+  O('Seated High-Stool Lean & Forward Glance', 'High-Stool Recline & Gaze', 'Seated sideways on a minimalist studio stool; at 00:03 leans forward with elbows resting on knee, shifting optical focus; at 00:07 raises chin and looks directly into camera lens with confident poise'),
+  O('Slow-Motion Strut & Jacket Shoulder Sling', 'Jacket Sling Strut', 'Walks gracefully towards camera in 24fps cinematic motion; at 00:04 slings her tailored blazer over one shoulder; at 00:08 stops in three-quarter profile with an effortless confident smirk')
+];
+
+const gesture = [
+  O('Hand casually resting on hip', 'one hand resting casually on hip, accentuating the waistline and relaxed confidence'),
+  O('Tucking loose hair strand behind ear', 'delicately reaching up to tuck a stray strand of hair behind her ear'),
+  O('Thumbs hooked in denim shorts pockets', 'thumbs casually hooked in denim pockets with fingers relaxed across fabric'),
+  O('Adjusting collar with natural elegance', 'lightly brushing fingertips against collarbone or neckline with fluid hand movement'),
+  O('Draping jacket over shoulder', 'holding jacket nonchalantly draped over one shoulder with relaxed fingers')
+];
+
+// OPTION BANKS: Camera & Framing
+const cameraMotion = [
+  O('Slow cinematic push-in (Dolly in)', 'a steady, seamless dolly push-in tracking smoothly from medium shot into an intimate close-up'),
+  O('Smooth 180° orbital arc', 'a fluid, continuous 180-degree orbital arc sweeping around the model while maintaining perfect focal lock'),
+  O('Steadicam tracking forward in sync', 'a stabilized steadicam moving backwards in perfect sync with the model\'s forward walk'),
+  O('Low-angle pedestal up with tilt', 'camera starts at low hip level and smoothly booms upward to eye height while tilting gently downward'),
+  O('Subtle handheld organic drift', 'subtle handheld camera breathing and organic micro-drift creating raw cinematic realism without harsh shake'),
+  O('Lateral tracking slider shot', 'a horizontal tracking slider skimming past foreground elements while keeping subject centered')
+];
+
+const lens = [
+  O('85mm f/1.4 Anamorphic Portrait Lens', 'shot on 85mm anamorphic prime lens, razor-sharp facial details, creamy background bokeh, and subtle horizontal lens glints'),
+  O('50mm f/1.2 Cinematic Prime', 'shot on 50mm f/1.2 master cinema prime with natural human perspective and rich dimensional subject separation'),
+  O('35mm f/1.8 Wide Environmental Lens', 'shot on 35mm wide prime capturing full model silhouette along with architectural environment and expansive atmosphere'),
+  O('100mm Macro Beauty Prime', 'shot on 100mm macro lens isolating fine skin pores, individual eyelashes, and delicate lip gloss texture')
+];
+
+const framing = [
+  O('Full body establishing into 3/4 crop', 'starts as a full-body establishing shot framing head-to-toe styling, gently transitioning into a three-quarter fashion crop'),
+  O('Three-quarter portrait crop', 'three-quarter fashion framing from mid-thigh upward, prioritizing waistline, outfit fit, and posture'),
+  O('Medium close-up (bust & shoulders)', 'medium close-up framed from bust to top of head, highlighting facial performance and haircut silhouette'),
+  O('Intimate beauty close-up (face & hair)', 'intimate beauty close-up framing face, neck, and shoulder line with cinematic depth')
+];
+
+// OPTION BANKS: Scene & Lighting
+const background = [
+  O('Minimalist concrete studio with sunbeam', 'an expansive minimalist concrete studio with a polished floor reflecting soft light, pierced by a sharp angled natural sunbeam'),
+  O('Golden-hour rooftop terrace overlooking skyline', 'a sun-drenched rooftop terrace during golden hour with warm amber backlight and distant city skyscrapers blurred in bokeh'),
+  O('Vibrant urban street & textured brick alley', 'a trendy urban cobblestone sidewalk beside warm exposed brick walls and boutique storefronts with soft pedestrian blur'),
+  O('Dark moody studio with cyan & magenta rim light', 'a high-contrast dark studio cyclorama illuminated by soft warm key light and dramatic cyan/magenta edge lighting'),
+  O('Luxury penthouse suite with floor-to-ceiling glass', 'an ultra-modern penthouse lounge with floor-to-ceiling glass windows overlooking twilight city lights')
+];
+
+const lighting = [
+  O('Warm golden hour backlight + soft key', 'glorious warm golden-hour rim lighting illuminating hair perimeter with soft diffused bounce fill on the face'),
+  O('High-fashion beauty softbox with silver bounce', 'giant overhead octabox creating wrap-around illumination, crisp specular highlights on lips, and soft natural shadows'),
+  O('Dramatic cinematic side-raking sunlight', 'hard direct sunlight raking across the subject from a 45-degree angle, casting artistic linear shadows and highlighting skin texture'),
+  O('Moody tungsten glow with neon bokeh', 'soft warm tungsten practical lights in the scene creating golden skin tones against cool twilight background bokeh')
+];
+
+// Checkboxes for finish
+const finishChecks = [
+  { id: 'identity', label: 'Preserve recognizable facial identity', detail: 'Strictly retain the reference woman\'s facial bone structure, ethnic features, and eye shape across all 10 seconds.', checked: true },
+  { id: 'soloSubject', label: 'Strictly solo female subject', detail: 'Zero secondary people, stylists, or assistants visible; she is the solitary protagonist.', checked: true },
+  { id: 'hairTexture', label: 'Preserve authentic hair texture', detail: 'Retain natural fiber density and thickness; avoid synthetic digital smoothing or artificial curl distortion.', checked: true },
+  { id: 'skinRealism', label: 'Natural skin texture & pores', detail: 'Authentic skin with visible pores and realistic light falloff; no waxy, plastic, or airbrushed AI skin.', checked: true },
+  { id: 'antiWarp', label: 'Anti-morphing & temporal stability', detail: 'No morphing hands, anatomical shifts, melting backgrounds, or temporal flickering across all frames.', checked: true },
+  { id: 'fluidMotion', label: 'Realistic human velocity & 24fps cadence', detail: 'Natural human motion speed; prevent hyperactive jitter, sped-up motion, or robotic transitions.', checked: true },
+  { id: 'noText', label: 'No text, logos or watermarks', detail: 'Clean video canvas free of timestamps, overlays, or graphic artifacts.', checked: true }
+];
+
+// Studio State
+let activeSection = 'look';
+let wardrobeMode = 'separates';
+let activeRatio = '9:16';
+let activeFps = '24fps';
+let activeMotion = 'Organic (5/10)';
+let outputFormat = 'timeline'; // 'timeline' | 'fluid' | 'director'
+let promptHistory = [];
+
+const values = {};
+const checkState = {};
+finishChecks.forEach(c => checkState[c.id] = c.checked);
+
+const sections = [
+  { id: 'look', name: 'Hair & makeover', icon: '✂', desc: 'Haircut styling, fiber texture, and windblown dynamics.' },
+  { id: 'wardrobe', name: 'Wardrobe & separates', icon: '👗', desc: 'Outfits, crop tops, denim cutoffs, and fabric motion.' },
+  { id: 'makeup', name: 'Makeup & skin', icon: '💄', desc: 'Lip artistry, eye flutter, complexion, and micro-expressions.' },
+  { id: 'motion', name: '10s Choreography & pose', icon: '▶', desc: '3-beat temporal action arc, head turns, and walking cadence.' },
+  { id: 'camera', name: 'Camera & cinematography', icon: '🎥', desc: 'Dolly push-ins, 180° orbits, lenses, and framing.' },
+  { id: 'scene', name: 'Scene & lighting', icon: '🌇', desc: 'Locations, golden hour shifts, and atmospheric breeze.' },
+  { id: 'finish', name: 'Finish & video guardrails', icon: '🛡️', desc: 'Identity locking, anti-warp directives, and negative exclusions.' }
+];
+
+const fields = {
+  // Look
+  hair: { section: 'look', label: 'Haircut & Styling', opts: hair, def: 0 },
+  hairMotion: { section: 'look', label: 'Hair Aerodynamics & Flutter (10s)', opts: hairMotion, def: 0 },
+  hairColor: { section: 'look', label: 'Hair Color Palette', opts: hairColor, def: 0 },
+  // Wardrobe
+  outfitCategory: { section: 'wardrobe', label: 'Wardrobe Architecture', opts: outfitCategory, def: 0 },
+  topPiece: { section: 'wardrobe', label: 'Top Piece Styling', opts: topPiece, def: 0 },
+  bottomPiece: { section: 'wardrobe', label: 'Bottom Piece (Cutoff Shorts / Trousers)', opts: bottomPiece, def: 0 },
+  midriffStyling: { section: 'wardrobe', label: 'Midriff & Waist Accent', opts: midriffStyling, def: 0 },
+  fullOutfit: { section: 'wardrobe', label: 'Full Ensemble (Alternative to separates)', opts: fullOutfit, def: 0 },
+  fabricMovement: { section: 'wardrobe', label: 'Fabric Kinetic Behavior', opts: fabricMovement, def: 0 },
+  // Makeup
+  makeup: { section: 'makeup', label: 'Lip & Eye Artistry', opts: makeup, def: 0 },
+  facialPerformance: { section: 'makeup', label: 'Facial Micro-Expressions (10s)', opts: facialPerformance, def: 0 },
+  // Motion
+  choreography10s: { section: 'motion', label: '10-Second Temporal Choreography Arc', opts: choreography10s, def: 0 },
+  gesture: { section: 'motion', label: 'Hand & Posture Detail', opts: gesture, def: 0 },
+  // Camera
+  framing: { section: 'camera', label: 'Framing & Initial Crop', opts: framing, def: 0 },
+  cameraMotion: { section: 'camera', label: 'Camera Trajectory (10s)', opts: cameraMotion, def: 0 },
+  lens: { section: 'camera', label: 'Lens & Optics', opts: lens, def: 0 },
+  // Scene
+  background: { section: 'scene', label: 'Environment & Setting', opts: background, def: 0 },
+  lighting: { section: 'scene', label: 'Lighting Progression & Atmosphere', opts: lighting, def: 0 }
+};
+
+// Initialize default values
+Object.entries(fields).forEach(([k, f]) => {
+  values[k] = f.opts[f.def || 0];
+});
+
+// Presets
+const presets = [
+  {
+    title: 'Catwalk Stroll in Crop Tank & Cutoffs',
+    icon: '⚡',
+    sub: 'Crop Top + Denim · 180° Orbit · Golden Hour',
+    set: {
+      hair: hair[4], hairMotion: hairMotion[0], outfitCategory: outfitCategory[0],
+      topPiece: topPiece[0], bottomPiece: bottomPiece[0], midriffStyling: midriffStyling[0],
+      fabricMovement: fabricMovement[0], makeup: makeup[0], facialPerformance: facialPerformance[0],
+      choreography10s: choreography10s[0], gesture: gesture[2], framing: framing[0],
+      cameraMotion: cameraMotion[2], lens: lens[0], background: background[1], lighting: lighting[0]
+    }
+  },
+  {
+    title: 'Rooftop Windblown Hair Flip & Smirk',
+    icon: '🌅',
+    sub: 'Butterfly Cut · Wind Machine · Push-in Dolly',
+    set: {
+      hair: hair[3], hairMotion: hairMotion[1], outfitCategory: outfitCategory[0],
+      topPiece: topPiece[3], bottomPiece: bottomPiece[1], midriffStyling: midriffStyling[1],
+      fabricMovement: fabricMovement[2], makeup: makeup[2], facialPerformance: facialPerformance[2],
+      choreography10s: choreography10s[2], gesture: gesture[1], framing: framing[1],
+      cameraMotion: cameraMotion[0], lens: lens[1], background: background[1], lighting: lighting[0]
+    }
+  },
+  {
+    title: 'High-Fashion Studio Orbit & Gaze Lock',
+    icon: '✨',
+    sub: 'Sleek Ponytail · 360° Orbit · Rim Light',
+    set: {
+      hair: hair[7], hairMotion: hairMotion[3], outfitCategory: outfitCategory[1],
+      fullOutfit: fullOutfit[0], fabricMovement: fabricMovement[0], makeup: makeup[1],
+      facialPerformance: facialPerformance[1], choreography10s: choreography10s[1],
+      gesture: gesture[0], framing: framing[1], cameraMotion: cameraMotion[1],
+      lens: lens[0], background: background[3], lighting: lighting[3]
+    }
+  },
+  {
+    title: 'Urban Street Stride in Lace Cami',
+    icon: '🏙️',
+    sub: 'Lob Cut · Steadicam Follow · Concrete Sunbeam',
+    set: {
+      hair: hair[2], hairMotion: hairMotion[0], outfitCategory: outfitCategory[0],
+      topPiece: topPiece[3], bottomPiece: bottomPiece[0], midriffStyling: midriffStyling[0],
+      fabricMovement: fabricMovement[1], makeup: makeup[3], facialPerformance: facialPerformance[0],
+      choreography10s: choreography10s[4], gesture: gesture[4], framing: framing[0],
+      cameraMotion: cameraMotion[2], lens: lens[2], background: background[2], lighting: lighting[2]
+    }
+  }
+];
+
+const el = id => document.getElementById(id);
+
+// Render Tabs
+function renderTabs() {
+  const tabsEl = el('tabs');
+  tabsEl.innerHTML = '';
+  sections.forEach((sec, idx) => {
+    const b = document.createElement('button');
+    b.type = 'button';
+    b.className = `tab ${sec.id === activeSection ? 'active' : ''}`;
+    b.innerHTML = `<span class="tab-no">0${idx+1}</span>${sec.icon} ${sec.name}`;
+    b.addEventListener('click', () => goSection(sec.id));
+    tabsEl.appendChild(b);
+  });
+}
+
+function goSection(secId) {
+  activeSection = secId;
+  const s = sections.find(x => x.id === secId);
+  if (!s) return;
+  const idx = sections.indexOf(s);
+  el('stepEyebrow').textContent = `Motion Direction · 0${idx+1}`;
+  el('stepTitle').textContent = s.name;
+  el('stepDescription').textContent = s.desc;
+  el('stepIcon').textContent = s.icon;
+  el('stepCount').textContent = `Step ${idx+1} of ${sections.length}`;
+  renderTabs();
+  renderFields();
+}
+
+// Render Fields
+function renderFields() {
+  const host = el('fields');
+  host.innerHTML = '';
+
+  if (activeSection === 'finish') {
+    renderFinishSection(host);
+    return;
+  }
+
+  // Filter fields belonging to current section
+  const secFields = Object.entries(fields).filter(([k, f]) => {
+    if (f.section !== activeSection) return false;
+    // Conditionals for wardrobe
+    if (activeSection === 'wardrobe') {
+      const isSeparates = values.outfitCategory?.text === 'separates';
+      if (isSeparates && k === 'fullOutfit') return false;
+      if (!isSeparates && (k === 'topPiece' || k === 'bottomPiece' || k === 'midriffStyling')) return false;
+    }
+    return true;
+  });
+
+  secFields.forEach(([id, f]) => {
+    const wrap = document.createElement('div');
+    wrap.className = `field ${id === 'choreography10s' || id === 'cameraMotion' ? 'full' : ''}`;
+
+    const labelRow = document.createElement('div');
+    labelRow.className = 'label-row';
+    labelRow.innerHTML = `<label>${f.label}</label><span class="option-count">${f.opts.length} choices</span>`;
+    wrap.appendChild(labelRow);
+
+    // Custom select element
+    const custom = document.createElement('div');
+    custom.className = 'custom-select';
+
+    const trigger = document.createElement('button');
+    trigger.type = 'button';
+    trigger.className = 'select-trigger';
+    trigger.innerHTML = `<span class="current">${values[id]?.label || f.opts[0].label}</span><span class="chevron">⌄</span>`;
+
+    const menu = document.createElement('div');
+    menu.className = 'select-menu';
+
+    const search = document.createElement('input');
+    search.type = 'text';
+    search.className = 'select-search';
+    search.placeholder = `Search ${f.label.toLowerCase()}...`;
+    menu.appendChild(search);
+
+    const list = document.createElement('div');
+    list.className = 'option-list';
+
+    f.opts.forEach(opt => {
+      const b = document.createElement('button');
+      b.type = 'button';
+      b.className = `choice ${values[id]?.label === opt.label ? 'selected' : ''}`;
+      b.innerHTML = `<span>${opt.label}</span>${values[id]?.label === opt.label ? '<span class="checkmark">✓</span>' : ''}`;
+      b.addEventListener('click', () => {
+        values[id] = opt;
+        trigger.querySelector('.current').textContent = opt.label;
+        custom.classList.remove('open');
+        buildPrompt();
+        if (id === 'outfitCategory') renderFields();
+      });
+      list.appendChild(b);
+    });
+
+    search.addEventListener('input', () => {
+      const q = search.value.toLowerCase().trim();
+      list.querySelectorAll('.choice').forEach(c => {
+        c.style.display = c.textContent.toLowerCase().includes(q) ? 'block' : 'none';
+      });
+    });
+
+    menu.appendChild(list);
+    custom.appendChild(trigger);
+    custom.appendChild(menu);
+
+    trigger.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const wasOpen = custom.classList.contains('open');
+      document.querySelectorAll('.custom-select.open').forEach(x => x.classList.remove('open'));
+      if (!wasOpen) {
+        custom.classList.add('open');
+        search.value = '';
+        list.querySelectorAll('.choice').forEach(c => c.style.display = 'block');
+        search.focus();
+      }
+    });
+
+    wrap.appendChild(custom);
+    host.appendChild(wrap);
+  });
+}
+
+function renderFinishSection(host) {
+  const wrap = document.createElement('div');
+  wrap.className = 'field full';
+  wrap.innerHTML = `<div class="label-row"><label>10-Second Video Consistency & Temporal Guardrails</label></div>`;
+
+  const checksDiv = document.createElement('div');
+  checksDiv.className = 'checks';
+
+  finishChecks.forEach(c => {
+    const item = document.createElement('label');
+    item.className = 'check';
+    item.innerHTML = `
+      <input type="checkbox" id="chk_${c.id}" ${checkState[c.id] ? 'checked' : ''}>
+      <div>
+        <strong>${c.label}</strong>
+        <small>${c.detail}</small>
+      </div>
+    `;
+    item.querySelector('input').addEventListener('change', (e) => {
+      checkState[c.id] = e.target.checked;
+      buildPrompt();
+    });
+    checksDiv.appendChild(item);
+  });
+
+  wrap.appendChild(checksDiv);
+  host.appendChild(wrap);
+}
+
+// Close selects on outside click
+document.addEventListener('click', () => {
+  document.querySelectorAll('.custom-select.open').forEach(x => x.classList.remove('open'));
+});
+
+// Render Presets
+function renderPresets() {
+  const pHost = el('presets');
+  pHost.innerHTML = '';
+  presets.forEach(p => {
+    const card = document.createElement('button');
+    card.type = 'button';
+    card.className = 'preset';
+    card.innerHTML = `
+      <div class="preset-icon">${p.icon}</div>
+      <strong>${p.title}</strong>
+      <small>${p.sub}</small>
+    `;
+    card.addEventListener('click', () => {
+      Object.assign(values, p.set);
+      renderFields();
+      buildPrompt();
+      toast(`Applied motion: ${p.title}`);
+    });
+    pHost.appendChild(card);
+  });
+}
+
+// Assemble Prompt
+function buildPrompt() {
+  const lines = [];
+  const checks = [];
+
+  if (checkState.identity) checks.push('Strictly preserve the same adult woman from the reference image, retaining her exact facial bone structure, warm skin tone, eye shape, and ethnic identity with zero face replacement or identity drift across all 10 seconds.');
+  if (checkState.soloSubject) checks.push('Strictly solo female protagonist only; zero other people, hairstylists, assistants, or hands in the frame.');
+  if (checkState.hairTexture) checks.push('Strictly preserve her authentic natural hair strand texture, thickness, and density; do not alter her hair fiber into synthetic CGI gloss or artificial curls.');
+  if (checkState.skinRealism) checks.push('Render authentic skin texture with visible pores, subtle light falloff, and natural facial asymmetry; avoid waxy, plastic, or airbrushed AI skin.');
+  if (checkState.antiWarp) checks.push('Strict temporal stability: Zero anatomical morphing, no disappearing accessories, no warping background geometry, and no double limbs across the entire video.');
+  if (checkState.fluidMotion) checks.push('Natural human physical momentum and pacing: 24fps cinematic motion blur with fluid organic movement; avoid sped-up frantic jitter or robotic transitions.');
+
+  // Wardrobe prose
+  let wardrobeText = '';
+  if (values.outfitCategory?.text === 'separates') {
+    wardrobeText = `Wardrobe separates ensemble featuring ${values.topPiece?.text || ''} paired with ${values.bottomPiece?.text || ''}. Midriff and waist accent: ${values.midriffStyling?.text || ''}. Fabric dynamics: ${values.fabricMovement?.text || ''}.`;
+  } else {
+    wardrobeText = `Wardrobe: ${values.fullOutfit?.text || ''}. Fabric dynamics: ${values.fabricMovement?.text || ''}.`;
+  }
+
+  // Update visual timeline widget
+  const choreo = values.choreography10s?.text || '';
+  el('beat1Text').textContent = `[00:00-00:03] Starting from reference image: ${values.framing?.text || 'Establishing framing'}. ${values.cameraMotion?.text || 'Camera begins motion'}. Hair: ${values.hairMotion?.text || ''}.`;
+  el('beat2Text').textContent = `[00:03-00:07] Core apex motion: ${choreo}. Facial performance: ${values.facialPerformance?.text || ''}.`;
+  el('beat3Text').textContent = `[00:07-00:10] Resolution cadence: Camera settles into final framing; subject holds confident magnetic gaze; hair and fabric gently settle.`;
+
+  if (outputFormat === 'timeline') {
+    lines.push('REFERENCE-IMAGE TO 10-SECOND CINEMATIC VIDEO (TIMELINE CHOREOGRAPHY)');
+    lines.push('');
+    lines.push('INPUT ANCHOR (FRAME 00:00):');
+    lines.push('• The video begins exactly from the supplied reference image frame, perfectly locking the model\'s recognizable facial identity, skin tone, and styling.');
+    lines.push('');
+    lines.push('SUBJECT & WARDROBE CONTINUITY:');
+    lines.push(`• Hairstyle: ${values.hair?.text || ''}. Natural strand behavior: ${values.hairMotion?.text || ''}.`);
+    lines.push(`• ${wardrobeText}`);
+    lines.push(`• Makeup & Micro-Expressions: ${values.makeup?.text || ''}. Performance: ${values.facialPerformance?.text || ''}.`);
+    lines.push('');
+    lines.push('10-SECOND SYNCHRONIZED TEMPORAL ARC:');
+    lines.push(`[00:00 - 00:03 | BEAT 1 - ANCHOR & INITIAL MOMENTUM]:`);
+    lines.push(`Starting seamlessly from the reference image. Initial framing: ${values.framing?.text || ''}. ${values.cameraMotion?.text || ''}. Subtle natural breathing, eyes blinking naturally, and strands of hair fluttering organically.`);
+    lines.push('');
+    lines.push(`[00:03 - 00:07 | BEAT 2 - APEX ACTION & CHOREOGRAPHY]:`);
+    lines.push(`The primary dynamic motion unfolds: ${choreo}. Hand detail: ${values.gesture?.text || ''}. Wardrobe fabric ripples realistically with her physical momentum.`);
+    lines.push('');
+    lines.push(`[00:07 - 00:10 | BEAT 3 - RESOLUTION & GAZE CADENCE]:`);
+    lines.push(`Camera motion gently decelerates, settling into a stable aesthetic composition. The model locks her magnetic, confident gaze directly into the lens, holding a candid expression as motion settles.`);
+    lines.push('');
+    lines.push('CINEMATOGRAPHY & LIGHTING:');
+    lines.push(`• Lens & Optics: ${values.lens?.text || ''}. Aspect ratio: ${activeRatio}. Cadence: ${activeFps}. Motion Intensity: ${activeMotion}.`);
+    lines.push(`• Environment & Setting: ${values.background?.text || ''}.`);
+    lines.push(`• Lighting Dynamics: ${values.lighting?.text || ''}.`);
+    lines.push('');
+    lines.push('TEMPORAL PRESERVATION & CONSISTENCY RULES:');
+    checks.forEach(c => lines.push(`• ${c}`));
+  } else if (outputFormat === 'fluid') {
+    lines.push(`A seamless 10-second high-fashion cinematic video starting from the reference image. The video features the same adult woman with identical facial features and warm skin tone throughout. Beginning from the initial frame, the camera executes ${values.cameraMotion?.text || ''} on ${values.lens?.text || ''}. Across the 10-second duration, ${choreo}. She is dressed in ${wardrobeText}. Her hair is styled as ${values.hair?.text || ''}, with ${values.hairMotion?.text || ''}. Makeup features ${values.makeup?.text || ''}, with subtle facial micro-expressions (${values.facialPerformance?.text || ''}). Set within ${values.background?.text || ''} illuminated by ${values.lighting?.text || ''}. At the 7-to-10-second mark, the camera smoothly decelerates as she holds a confident, magnetic direct gaze into the lens. Strict identity continuity across all 10 seconds with zero morphing or warping.`);
+  } else {
+    // Director's Breakdown
+    lines.push('DIRECTOR\'S TECHNICAL SHOT SHEET · 10-SECOND I2V');
+    lines.push(`PROJECT: Makeover Photoshoot 10s Motion Clip | RATIO: ${activeRatio} | CADENCE: ${activeFps} | INTENSITY: ${activeMotion}`);
+    lines.push(`INITIAL ANCHOR: Reference image first frame (Zero identity drift)`);
+    lines.push(`TIME ARC: 00:00-00:03 (Establish) -> 00:03-00:07 (Dynamic Turn) -> 00:07-00:10 (Gaze Lock)`);
+    lines.push(`CAMERA TRAJECTORY: ${values.cameraMotion?.text || ''}`);
+    lines.push(`LENS & OPTICS: ${values.lens?.text || ''}`);
+    lines.push(`CORE ACTION: ${choreo}`);
+    lines.push(`SUBJECT HAIR & MOTION: ${values.hair?.text || ''} | ${values.hairMotion?.text || ''}`);
+    lines.push(`WARDROBE & FABRIC: ${wardrobeText}`);
+    lines.push(`SCENE & LIGHT: ${values.background?.text || ''} | ${values.lighting?.text || ''}`);
+    lines.push(`GUARDRAILS: ${checks.join(' ')}`);
+  }
+
+  const promptText = lines.join('\n');
+  el('prompt').value = promptText;
+
+  const words = promptText.trim().split(/\s+/).length;
+  el('wordCount').textContent = `${words} words · ${promptText.length} chars · 10-Sec Video (${activeRatio})`;
+
+  // Summary tags
+  const sumEl = el('summary');
+  sumEl.innerHTML = `
+    <span class="summary-tag">${values.hair?.label?.split(' ')[0] || 'Hair'}</span>
+    <span class="summary-tag">${values.outfitCategory?.text === 'separates' ? 'Separates' : 'Gown'}</span>
+    <span class="summary-tag">${activeRatio}</span>
+    <span class="summary-tag">${activeFps}</span>
+    <span class="summary-tag">10s Video</span>
+  `;
+}
+
+// Toast helper
+function toast(msg) {
+  const t = el('toast');
+  t.textContent = msg;
+  t.classList.remove('flash');
+  void t.offsetWidth;
+  t.classList.add('flash');
+}
+
+// Navigation Step Buttons
+el('prevStep')?.addEventListener('click', () => {
+  const idx = sections.findIndex(s => s.id === activeSection);
+  if (idx > 0) goSection(sections[idx - 1].id);
+});
+
+el('nextStep')?.addEventListener('click', () => {
+  const idx = sections.findIndex(s => s.id === activeSection);
+  if (idx < sections.length - 1) goSection(sections[idx + 1].id);
+});
+
+// Mode controls
+el('btnTimelineMode')?.addEventListener('click', () => {
+  outputFormat = 'timeline';
+  updateModeButtons();
+  buildPrompt();
+  toast('Switched to 10s Timeline Script Format (0-3s, 3-7s, 7-10s beats).');
+});
+
+el('btnFluidMode')?.addEventListener('click', () => {
+  outputFormat = 'fluid';
+  updateModeButtons();
+  buildPrompt();
+  toast('Switched to Continuous Fluid Prose Format.');
+});
+
+el('btnDirectorMode')?.addEventListener('click', () => {
+  outputFormat = 'director';
+  updateModeButtons();
+  buildPrompt();
+  toast('Switched to Director\'s Technical Cue Format.');
+});
+
+function updateModeButtons() {
+  el('btnTimelineMode').classList.toggle('active', outputFormat === 'timeline');
+  el('btnFluidMode').classList.toggle('active', outputFormat === 'fluid');
+  el('btnDirectorMode').classList.toggle('active', outputFormat === 'director');
+}
+
+// Ratio chips
+document.querySelectorAll('#ratioChips .ratio-chip').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('#ratioChips .ratio-chip').forEach(x => x.classList.remove('active'));
+    btn.classList.add('active');
+    activeRatio = btn.dataset.ratio;
+    buildPrompt();
+    toast(`Aspect ratio set to ${activeRatio}.`);
+  });
+});
+
+// FPS chips
+document.querySelectorAll('#fpsChips .ratio-chip').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('#fpsChips .ratio-chip').forEach(x => x.classList.remove('active'));
+    btn.classList.add('active');
+    activeFps = btn.dataset.fps;
+    buildPrompt();
+    toast(`Framerate set to ${activeFps}.`);
+  });
+});
+
+// Motion chips
+document.querySelectorAll('#motionChips .ratio-chip').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('#motionChips .ratio-chip').forEach(x => x.classList.remove('active'));
+    btn.classList.add('active');
+    activeMotion = btn.dataset.motion;
+    buildPrompt();
+    toast(`Motion intensity set to ${activeMotion}.`);
+  });
+});
+
+// Copy button
+function copyPrompt() {
+  const text = el('prompt').value;
+  navigator.clipboard.writeText(text).then(() => {
+    recordHistory();
+    toast('✓ 10-Second Video Prompt copied to clipboard!');
+  });
+}
+el('copy')?.addEventListener('click', copyPrompt);
+el('copyTop')?.addEventListener('click', copyPrompt);
+
+// Copy negative exclusions
+el('copyNegative')?.addEventListener('click', () => {
+  const neg = "photomontage, duplicate faces, morphing anatomy, disappearing limbs, extra fingers, waxy skin, plastic face, rubbery joints, erratic motion jitter, unnatural acceleration, strobe flicker, melting background, cartoon, 3d render, watermark, text overlays, logo";
+  navigator.clipboard.writeText(neg).then(() => {
+    toast('✓ Video Negative Constraints copied to clipboard!');
+  });
+});
+
+// Download .txt
+el('download')?.addEventListener('click', () => {
+  const blob = new Blob([el('prompt').value], { type: 'text/plain' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = `kinetix_10s_photoshoot_prompt_${Date.now()}.txt`;
+  a.click();
+  toast('Prompt file downloaded.');
+});
+
+// Select prompt text
+el('selectPrompt')?.addEventListener('click', () => {
+  el('prompt').select();
+  toast('All prompt text selected.');
+});
+
+// Randomizer
+el('randomTop')?.addEventListener('click', () => {
+  Object.keys(fields).forEach(k => {
+    const opts = fields[k].opts;
+    values[k] = opts[Math.floor(Math.random() * opts.length)];
+  });
+  renderFields();
+  buildPrompt();
+  toast('✦ Generated surprise 10s video motion direction!');
+});
+
+// Reset
+el('resetTop')?.addEventListener('click', () => {
+  Object.keys(fields).forEach(k => {
+    values[k] = fields[k].opts[fields[k].def || 0];
+  });
+  renderFields();
+  buildPrompt();
+  toast('↺ Reset all selections to defaults.');
+});
+
+// Shuffle Presets
+el('shuffleLooks')?.addEventListener('click', () => {
+  renderPresets();
+  toast('Shuffled motion presets.');
+});
+
+// History recording
+function recordHistory() {
+  const t = el('prompt').value.trim();
+  if (!t) return;
+  if (!promptHistory.length || promptHistory[0].text !== t) {
+    promptHistory.unshift({ id: Date.now(), text: t, time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }), words: t.split(/\s+/).length });
+    if (promptHistory.length > 20) promptHistory.pop();
+    el('historyBadge').textContent = promptHistory.length;
+  }
+}
+
+// History modal
+el('openHistoryBtn')?.addEventListener('click', () => {
+  const list = el('historyList');
+  list.innerHTML = '';
+  if (!promptHistory.length) {
+    list.innerHTML = '<p style="color:var(--muted); font-size:12px; text-align:center; padding:20px;">No prompts saved in this session yet.</p>';
+  } else {
+    promptHistory.forEach(item => {
+      const d = document.createElement('div');
+      d.className = 'history-item';
+      d.innerHTML = `
+        <div class="history-meta">
+          <span>${item.time} · ${item.words} words</span>
+          <button class="btn btn-secondary btn-small" style="padding:3px 8px; font-size:10px;">Load</button>
+        </div>
+        <div class="history-text">${item.text}</div>
+      `;
+      d.querySelector('button').addEventListener('click', () => {
+        el('prompt').value = item.text;
+        el('historyModal').classList.remove('active');
+        el('historyBackdrop').classList.remove('active');
+        toast('Loaded prompt from history.');
+      });
+      list.appendChild(d);
+    });
+  }
+  el('historyModal').classList.add('active');
+  el('historyBackdrop').classList.add('active');
+});
+
+el('closeHistoryBtn')?.addEventListener('click', () => {
+  el('historyModal').classList.remove('active');
+  el('historyBackdrop').classList.remove('active');
+});
+el('historyBackdrop')?.addEventListener('click', () => {
+  el('historyModal').classList.remove('active');
+  el('historyBackdrop').classList.remove('active');
+});
+el('clearHistoryBtn')?.addEventListener('click', () => {
+  promptHistory = [];
+  el('historyBadge').textContent = '0';
+  el('historyList').innerHTML = '<p style="color:var(--muted); font-size:12px; text-align:center; padding:20px;">History cleared.</p>';
+});
+
+// Share URL
+function generateShareUrl() {
+  const state = {
+    v: Object.fromEntries(Object.entries(values).map(([k, v]) => [k, v.label])),
+    r: activeRatio,
+    f: activeFps,
+    m: activeMotion,
+    o: outputFormat
+  };
+  const str = btoa(encodeURIComponent(JSON.stringify(state)));
+  const url = `${window.location.origin}${window.location.pathname}#${str}`;
+  navigator.clipboard.writeText(url).then(() => {
+    toast('✓ Shareable motion link copied to clipboard!');
+  });
+}
+el('shareLookTop')?.addEventListener('click', generateShareUrl);
+el('shareLookBtn')?.addEventListener('click', generateShareUrl);
+
+// Load from hash if present
+function loadFromHash() {
+  if (window.location.hash.length > 1) {
+    try {
+      const raw = decodeURIComponent(atob(window.location.hash.slice(1)));
+      const state = JSON.parse(raw);
+      if (state.v) {
+        Object.entries(state.v).forEach(([k, label]) => {
+          if (fields[k]) {
+            const match = fields[k].opts.find(o => o.label === label);
+            if (match) values[k] = match;
+          }
+        });
+      }
+      if (state.r) activeRatio = state.r;
+      if (state.f) activeFps = state.f;
+      if (state.m) activeMotion = state.m;
+      if (state.o) outputFormat = state.o;
+    } catch(e) {}
+  }
+}
+
+// Init
+loadFromHash();
+renderTabs();
+goSection('look');
+renderPresets();
+updateModeButtons();
+buildPrompt();
+
+})();
+</script>
+</body>
+</html>

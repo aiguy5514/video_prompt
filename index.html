@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<title>Kinetix / 10-Second Video Prompt Studio</title>
+<link rel="stylesheet" href="css/shared.css">
+<style>
+/* ==========================================================================
+   PORTAL GRID & WORKFLOW GUIDE
+   ========================================================================== */
+.portal-container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 10px 40px 10px;
+}
+.hub-hero {
+  text-align: center;
+  padding: 40px 20px 36px 20px;
+  max-width: 920px;
+  margin: 0 auto;
+}
+.hub-hero h1 {
+  font-size: clamp(34px, 4.6vw, 56px);
+  font-weight: 850;
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+  margin: 14px 0;
+  background: linear-gradient(135deg, #fff 25%, var(--accent-video) 70%, var(--pink2) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.hub-hero p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--muted);
+  margin: 0 auto 24px auto;
+  max-width: 780px;
+}
+.hub-badges {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.portal-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+  margin-top: 20px;
+}
+@media (max-width: 900px) {
+  .portal-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.portal-card {
+  position: relative;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 30px 26px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+}
+.portal-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: all 0.3s ease;
+}
+.portal-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(255, 107, 74, 0.45);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.55), 0 0 28px rgba(255, 107, 74, 0.2);
+}
+.portal-card.card-photoshoot:hover::before {
+  background: linear-gradient(90deg, var(--accent-video), var(--pink));
+}
+.portal-card.card-salon:hover::before {
+  background: linear-gradient(90deg, #f59e0b, #ef4444);
+}
+.portal-card.card-makeup:hover::before {
+  background: linear-gradient(90deg, #ec4899, #c084fc);
+}
+.portal-card.card-tattoo:hover::before {
+  background: linear-gradient(90deg, #06b6d4, #10b981);
+}
+.portal-card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+.portal-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+.card-photoshoot .portal-icon {
+  background: rgba(255, 107, 74, 0.12);
+  border-color: rgba(255, 107, 74, 0.3);
+}
+.card-salon .portal-icon {
+  background: rgba(245, 158, 11, 0.12);
+  border-color: rgba(245, 158, 11, 0.3);
+}
+.card-makeup .portal-icon {
+  background: rgba(236, 72, 153, 0.12);
+  border-color: rgba(236, 72, 153, 0.3);
+}
+.card-tattoo .portal-icon {
+  background: rgba(6, 182, 212, 0.12);
+  border-color: rgba(6, 182, 212, 0.3);
+}
+.portal-badge {
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--muted);
+}
+.portal-badge.badge-hot {
+  background: rgba(255, 107, 74, 0.18);
+  border-color: rgba(255, 107, 74, 0.38);
+  color: #ff9d85;
+}
+.portal-title {
+  font-size: 1.55rem;
+  font-weight: 800;
+  margin: 0 0 10px 0;
+  color: #f8fafc;
+}
+.portal-desc {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--muted);
+  margin-bottom: 22px;
+  flex-grow: 1;
+}
+.portal-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-bottom: 24px;
+}
+.portal-tag {
+  font-size: 0.75rem;
+  padding: 4px 10px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #cfd8e3;
+}
+.portal-cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+  font-weight: 700;
+  font-size: 0.92rem;
+  color: #fff;
+}
+.portal-cta-arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+.portal-card:hover .portal-cta-arrow {
+  transform: translateX(4px);
+  background: var(--accent-video);
+  color: #1a080e;
+}
+
+/* Workflow steps */
+.workflow-section {
+  background: rgba(21, 18, 27, 0.7);
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  padding: 34px 30px;
+  margin-top: 36px;
+}
+.workflow-head {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto 30px auto;
+}
+.workflow-head h2 {
+  font-size: 1.75rem;
+  margin: 0 0 8px 0;
+  color: #f8fafc;
+}
+.workflow-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+@media (max-width: 860px) {
+  .workflow-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.workflow-card {
+  background: rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 14px;
+  padding: 20px;
+}
+.workflow-step {
+  font-size: 0.75rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  color: var(--accent-video);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.workflow-card h3 {
+  font-size: 1.15rem;
+  margin: 0 0 8px 0;
+  color: #f1f5f9;
+}
+.workflow-card p {
+  font-size: 0.88rem;
+  color: var(--muted);
+  line-height: 1.55;
+  margin: 0;
+}
+</style>
+</head>
+<body>
+<div class="shell">
+<header class="topbar">
+  <div class="brand">
+    <span class="brand-mark">▶</span>
+    <span>Kinetix / Video Prompt Studio</span>
+  </div>
+  <nav class="suite-nav" aria-label="Studio Switcher">
+    <a href="index.html" class="suite-nav-link active" title="Kinetix Hub">✦ Hub</a>
+    <a href="photoshoot.html" class="suite-nav-link"><span class="studio-btn-icon">📸</span> Photoshoot</a>
+    <a href="salon.html" class="suite-nav-link"><span class="studio-btn-icon">💈</span> Salon & Barbershop</a>
+    <a href="makeup.html" class="suite-nav-link"><span class="studio-btn-icon">💄</span> Makeup & Beauty <span class="nav-badge">NEW</span></a>
+    <a href="tattoo.html" class="suite-nav-link"><span class="studio-btn-icon">🖋️</span> Tattoo Studio</a>
+  </nav>
+  <div class="top-meta">
+    <span class="pill"><span class="pill-dot-video"></span> 10s Video Architecture</span>
+    <span class="pill">Offline · Zero Uploads</span>
+    <span class="pill">Kling · Runway · Minimax · Luma · Wan2.1</span>
+  </div>
+</header>
+
+<div class="portal-container">
+  <section class="hub-hero">
+    <div class="hub-badges">
+      <span class="pill">✦ Reference-to-Video Engine (I2V / Img2Vid)</span>
+      <span class="pill">10-Second Choreographed Arc</span>
+      <span class="pill">Zero Morphing · Strict Identity Lock</span>
+    </div>
+    <h1>Turn Reference Images into <span>10-Second Cinematic</span> Videos</h1>
+    <p>High-precision prompt craftsmanship for AI video generators. Direct temporal pacing, camera trajectories, micro-expressions, hair physics, and wardrobe dynamics starting from your reference image anchor.</p>
+  </section>
+
+  <div class="portal-grid">
+    <!-- Card 1: Photoshoot Studio -->
+    <a href="photoshoot.html" class="portal-card card-photoshoot">
+      <div class="portal-card-head">
+        <div class="portal-icon">📸</div>
+        <span class="portal-badge badge-hot">Editorial Fashion Video</span>
+      </div>
+      <h2 class="portal-title">Makeover Photoshoot Studio</h2>
+      <p class="portal-desc">Direct high-fashion post-makeover motion and lookbook videos. Animate hair flips, slow-motion catwalk turns, windblown separates (crop tops & denim shorts), and cinematic 180° camera orbits around the model over 10 seconds.</p>
+      <div class="portal-features">
+        <span class="portal-tag">10s Catwalk & Motion Poses</span>
+        <span class="portal-tag">Hair Flip & Bounce Physics</span>
+        <span class="portal-tag">Modular Separates Ripple</span>
+        <span class="portal-tag">Orbital & Tracking Cameras</span>
+      </div>
+      <div class="portal-cta">
+        <span>Launch Photoshoot Video Studio</span>
+        <span class="portal-cta-arrow">→</span>
+      </div>
+    </a>
+
+    <!-- Card 2: Salon & Barbershop Studio -->
+    <a href="salon.html" class="portal-card card-salon">
+      <div class="portal-card-head">
+        <div class="portal-icon">💈</div>
+        <span class="portal-badge">Realistic Haircut Dynamics</span>
+      </div>
+      <h2 class="portal-title">Salon & Barbershop Studio</h2>
+      <p class="portal-desc">Direct gritty, authentic in-progress haircut motion. Animate metallic scissor snips, damp comb glides, blow-dryer air sweeps, falling hair clippings over draped capes, and 360-degree swivel chair reveals.</p>
+      <div class="portal-features">
+        <span class="portal-tag">Barber Shears & Comb Action</span>
+        <span class="portal-tag">Hair Clippings on Cape</span>
+        <span class="portal-tag">360° Swivel Chair Spin</span>
+        <span class="portal-tag">Mirror Reflection Perspective</span>
+      </div>
+      <div class="portal-cta">
+        <span>Launch Salon Video Studio</span>
+        <span class="portal-cta-arrow">→</span>
+      </div>
+    </a>
+
+    <!-- Card 3: Makeup & Beauty Studio -->
+    <a href="makeup.html" class="portal-card card-makeup">
+      <div class="portal-card-head">
+        <div class="portal-icon">💄</div>
+        <span class="portal-badge badge-hot">Cosmetic & Facial Motion</span>
+      </div>
+      <h2 class="portal-title">Makeup & Beauty Studio</h2>
+      <p class="portal-desc">Specialized studio for macro cosmetic applications and facial micro-expressions. Direct lip gloss applications, eyelash blinks, dewy skin highlights catching ring lights, and slow-motion brush sweeps across cheekbones.</p>
+      <div class="portal-features">
+        <span class="portal-tag">Lip Parting & Gloss Shine</span>
+        <span class="portal-tag">Eyelash Flutter & Gaze Shifts</span>
+        <span class="portal-tag">Vanity Ring Light Sweeps</span>
+        <span class="portal-tag">100mm Macro Beauty Lens</span>
+      </div>
+      <div class="portal-cta">
+        <span>Launch Makeup Video Studio</span>
+        <span class="portal-cta-arrow">→</span>
+      </div>
+    </a>
+
+    <!-- Card 4: Tattoo Studio -->
+    <a href="tattoo.html" class="portal-card card-tattoo">
+      <div class="portal-card-head">
+        <div class="portal-icon">🖋️</div>
+        <span class="portal-badge">Body Art & Macro Skin</span>
+      </div>
+      <h2 class="portal-title">Tattoo & Body Art Studio</h2>
+      <p class="portal-desc">Craft tactile 10-second macro tattoo cinematography. Direct gloved artist paper towel wipes, fresh ointment glints, natural chest/rib breathing motion, and glancing sidelight along fine-line ink curves.</p>
+      <div class="portal-features">
+        <span class="portal-tag">Gloved Artist Ink Wipe</span>
+        <span class="portal-tag">Fresh Ointment Glint</span>
+        <span class="portal-tag">Breathing & Muscle Flex</span>
+        <span class="portal-tag">Tactile 100mm Macro Rake</span>
+      </div>
+      <div class="portal-cta">
+        <span>Launch Tattoo Video Studio</span>
+        <span class="portal-cta-arrow">→</span>
+      </div>
+    </a>
+  </div>
+
+  <section class="workflow-section">
+    <div class="workflow-head">
+      <h2>The 10-Second Reference-to-Video Framework</h2>
+      <p>How to achieve perfect temporal consistency and zero identity morphing in modern video diffusion models.</p>
+    </div>
+    <div class="workflow-grid">
+      <div class="workflow-card">
+        <div class="workflow-step">Step 01 · First Frame Anchor</div>
+        <h3>Attach Reference Image</h3>
+        <p>In Kling AI, Runway Gen-3, Luma Ray 2, or Hailuo Minimax, upload your reference photo into the <strong>First Frame / Image-to-Video</strong> slot. The AI anchors facial structure, hair color, and wardrobe from frame 0.</p>
+      </div>
+      <div class="workflow-card">
+        <div class="workflow-step">Step 02 · 10s Choreography</div>
+        <h3>Direct the 3 Temporal Beats</h3>
+        <p>A static prompt causes video models to freeze or hallucinate. Kinetix structures your prompt into <strong>Beat 1 (0-3s Establish)</strong>, <strong>Beat 2 (3-7s Dynamic Apex)</strong>, and <strong>Beat 3 (7-10s Cadence Settle)</strong>.</p>
+      </div>
+      <div class="workflow-card">
+        <div class="workflow-step">Step 03 · Temporal Guardrails</div>
+        <h3>Copy Prompt & Exclusions</h3>
+        <p>Copy the assembled prompt and negative video exclusions. Strict directives prevent limb hallucination, face warping, unnatural hyper-speed jitter, and plastic AI skin across all 240/300 frames.</p>
+      </div>
+    </div>
+  </section>
+
+  <p class="fineprint">KINETIX STUDIO · 10-Second Reference-to-Video Prompt Architecture · 100% Offline Client-Side Engine</p>
+</div>
+</div>
+</body>
+</html>
